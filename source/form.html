@@ -42,20 +42,20 @@
         форму заказа и мы свяжемся с вами,
         чтобы уточнить детали.
       </p>
-      <form class="form">
+      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="form__fieldset">
           <legend class="form__legend">Тип</legend>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label-radio">
-                <input class="form__control-radio" type="radio" name="type">
+                <input class="form__control-radio" type="radio" name="type" value="accessories" checked>
                 Аксессуар для
                 интерьера
               </label>
             </li>
             <li class="form__item">
               <label class="form__label-radio">
-                <input class="form__control-radio" type="radio" name="type">
+                <input class="form__control-radio" type="radio" name="type" value="toys">
                 Детская игрушка
               </label>
             </li>
@@ -68,37 +68,37 @@
           <ul class="form__list">
             <li class="form__item">
               <label class="form__label-checkbox">
-                <input class="form__control-checkbox" type="checkbox" checked>
+                <input class="form__control-checkbox" type="checkbox" name="color"  value="white" checked>
                 Белый
               </label>
             </li>
             <li class="form__item">
               <label class="form__label-checkbox">
-                <input class="form__control-checkbox" type="checkbox" checked>
+                <input class="form__control-checkbox" type="checkbox" name="color" value="grey" checked>
                 Серый
               </label>
             </li>
             <li class="form__item">
               <label class="form__label-checkbox">
-                <input class="form__control-checkbox" type="checkbox">
+                <input class="form__control-checkbox" type="checkbox" name="color" value="tiffany">
                 «Тиффани»
               </label>
             </li>
             <li class="form__item">
               <label class="form__label-checkbox">
-                <input class="form__control-checkbox" type="checkbox">
+                <input class="form__control-checkbox" type="checkbox" name="color" value="black">
                 Черный
               </label>
             </li>
             <li class="form__item">
               <label class="form__label-checkbox">
-                <input class="form__control-checkbox" type="checkbox">
+                <input class="form__control-checkbox" type="checkbox" name="color" value="rose">
                 Розовый
               </label>
             </li>
             <li class="form__item">
               <label class="form__label-checkbox">
-                <input class="form__control-checkbox" type="checkbox">
+                <input class="form__control-checkbox" type="checkbox" name="color" value="orange">
                 Оранжевый
               </label>
             </li>
@@ -111,19 +111,19 @@
           <div class="form__wrapper">
             <label class="form__label-text">
               Имя:
-              <input class="form__control-text" type="text" placeholder="Введите ваше имя*">
+              <input class="form__control-text" type="text" name="first-name" placeholder="Введите ваше имя*" required>
             </label>
           </div>
           <div class="form__wrapper">
             <label class="form__label-text">
               Фамилия:
-              <input class="form__control-text" type="text" placeholder="Укажите фамилию*">
+              <input class="form__control-text" type="text" name="last-name" placeholder="Укажите фамилию*" required>
             </label>
           </div>
           <div class="form__wrapper">
             <label class="form__label-text">
               Отчество:
-              <input class="form__control-text" type="text" placeholder="Отчество, если желаете">
+              <input class="form__control-text" type="text" name="middle-name" placeholder="Отчество, если желаете">
             </label>
           </div>
         </fieldset>
@@ -133,13 +133,13 @@
           <div class="form__wrapper">
             <label class="form__label-tel">
               тел
-              <input class="form__control-tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <input class="form__control-tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </label>
           </div>
           <div class="form__wrapper">
             <label class="form__label-email">
               E-mail
-              <input class="form__control-email" type="email" placeholder="Ваш Email*">
+              <input class="form__control-email" type="email" name="email" placeholder="Ваш Email*" required>
             </label>
           </div>
         </fieldset>
@@ -148,7 +148,7 @@
         <fieldset class="form__fieldset">
           <label class="form__label-textarea">
             Доп
-            <textarea class="form__control-textaria" cols="30" rows="10">Опишите все ваши пожелания к заказу
+            <textarea class="form__control-textaria" name="other" cols="27" rows="9">Опишите все ваши пожелания к заказу
             </textarea>
           </label>
         </fieldset>
@@ -159,7 +159,7 @@
         </p>
 
 
-        <button type="submit"></button>
+        <button type="submit">отправить заказ</button>
       </form>
     </main>
 
