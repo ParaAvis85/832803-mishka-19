@@ -35,27 +35,27 @@
     </header>
 
     <main>
-      <h1>Вязание на заказ</h1>
-      <p>
+      <h1 class="form__title">Вязание на заказ</h1>
+      <p class="form__description">
         Мы будем рады воплотить в жизнь
         ваши пожелания! Заполните простую
         форму заказа и мы свяжемся с вами,
         чтобы уточнить детали.
       </p>
-      <form>
-        <fieldset>
-          <legend>Тип</legend>
-          <ul>
-            <li>
-              <label>
-                <input type="radio" name="type">
+      <form class="form">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Тип</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label-radio">
+                <input class="form__control-radio" type="radio" name="type">
                 Аксессуар для
                 интерьера
               </label>
             </li>
-            <li>
-              <label>
-                <input type="radio" name="type">
+            <li class="form__item">
+              <label class="form__label-radio">
+                <input class="form__control-radio" type="radio" name="type">
                 Детская игрушка
               </label>
             </li>
@@ -63,42 +63,42 @@
         </fieldset>
 
 
-        <fieldset>
-          <legend>Цвет</legend>
-          <ul>
-            <li>
-              <label>
-                <input type="checkbox" checked>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Цвет</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label-checkbox">
+                <input class="form__control-checkbox" type="checkbox" checked>
                 Белый
               </label>
             </li>
-            <li>
-              <label>
-                <input type="checkbox" checked>
+            <li class="form__item">
+              <label class="form__label-checkbox">
+                <input class="form__control-checkbox" type="checkbox" checked>
                 Серый
               </label>
             </li>
-            <li>
-              <label>
-                <input type="checkbox">
+            <li class="form__item">
+              <label class="form__label-checkbox">
+                <input class="form__control-checkbox" type="checkbox">
                 «Тиффани»
               </label>
             </li>
-            <li>
-              <label>
-                <input type="checkbox">
+            <li class="form__item">
+              <label class="form__label-checkbox">
+                <input class="form__control-checkbox" type="checkbox">
                 Черный
               </label>
             </li>
-            <li>
-              <label>
-                <input type="checkbox">
+            <li class="form__item">
+              <label class="form__label-checkbox">
+                <input class="form__control-checkbox" type="checkbox">
                 Розовый
               </label>
             </li>
-            <li>
-              <label>
-                <input type="checkbox">
+            <li class="form__item">
+              <label class="form__label-checkbox">
+                <input class="form__control-checkbox" type="checkbox">
                 Оранжевый
               </label>
             </li>
@@ -106,56 +106,56 @@
         </fieldset>
 
 
-        <fieldset>
-          <legend>ФИО</legend>
-          <div>
-            <label>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">ФИО</legend>
+          <div class="form__wrapper">
+            <label class="form__label-text">
               Имя:
-              <input type="text" placeholder="Введите ваше имя*">
+              <input class="form__control-text" type="text" placeholder="Введите ваше имя*">
             </label>
           </div>
-          <div>
-            <label>
+          <div class="form__wrapper">
+            <label class="form__label-text">
               Фамилия:
-              <input type="text" placeholder="Укажите фамилию*">
+              <input class="form__control-text" type="text" placeholder="Укажите фамилию*">
             </label>
           </div>
-          <div>
-            <label>
+          <div class="form__wrapper">
+            <label class="form__label-text">
               Отчество:
-              <input type="text" placeholder="Отчество, если желаете">
+              <input class="form__control-text" type="text" placeholder="Отчество, если желаете">
             </label>
           </div>
         </fieldset>
 
 
-        <fieldset>
-          <div>
-            <label>
+        <fieldset class="form__fieldset">
+          <div class="form__wrapper">
+            <label class="form__label-tel">
               тел
-              <input type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <input class="form__control-tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
             </label>
           </div>
-          <div>
-            <label>
+          <div class="form__wrapper">
+            <label class="form__label-email">
               E-mail
-              <input type="email" placeholder="Ваш Email*">
+              <input class="form__control-email" type="email" placeholder="Ваш Email*">
             </label>
           </div>
         </fieldset>
 
 
-        <fieldset>
-          <label>
+        <fieldset class="form__fieldset">
+          <label class="form__label-textarea">
             Доп
-            <textarea cols="30" rows="10">Опишите все ваши пожелания к заказу
+            <textarea class="form__control-textaria" cols="30" rows="10">Опишите все ваши пожелания к заказу
             </textarea>
           </label>
         </fieldset>
 
 
         <p>
-          <strong>*Поля обязательны для заполнения</strong>
+          <strong class="form__footnote">*Поля обязательны для заполнения</strong>
         </p>
 
 
