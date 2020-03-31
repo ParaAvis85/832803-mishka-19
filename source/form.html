@@ -18,7 +18,7 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="#">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="#">Вязание на заказ</a>
@@ -33,6 +33,136 @@
       </div>
       </nav>
     </header>
+
+    <main>
+      <h1 class="page-title">Вязание на заказ</h1>
+      
+      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="form__description">
+          Мы будем рады воплотить в жизнь
+          ваши пожелания! Заполните простую
+          форму заказа и мы свяжемся с вами,
+          чтобы уточнить детали.
+        </p>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Тип</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__control form__control--radio" type="radio" name="type" value="accessories" checked>
+                Аксессуар для
+                интерьера
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__control form__control--radio" type="radio" name="type" value="toys">
+                Детская игрушка
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Цвет</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label form__label--checkbox">
+                <input class="form__control form__control--checkbox" type="checkbox" name="color"  value="white" checked>
+                Белый
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox">
+                <input class="form__control form__control--checkbox" type="checkbox" name="color" value="grey" checked>
+                Серый
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox">
+                <input class="form__control form__control--checkbox" type="checkbox" name="color" value="tiffany">
+                «Тиффани»
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox">
+                <input class="form__control form__control--checkbox" type="checkbox" name="color" value="black">
+                Черный
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox">
+                <input class="form__control form__control--checkbox" type="checkbox" name="color" value="rose">
+                Розовый
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label form__label--checkbox">
+                <input class="form__control form__control--checkbox" type="checkbox" name="color" value="orange">
+                Оранжевый
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">ФИО</legend>
+          <div class="form__wrapper">
+            <label class="form__label form__label--text">
+              Имя:
+              <input class="form__control form__control--text" type="text" name="first-name" placeholder="Введите ваше имя*" required>
+            </label>
+          </div>
+          <div class="form__wrapper">
+            <label class="form__label form__label--text">
+              Фамилия:
+              <input class="form__control form__control--text" type="text" name="last-name" placeholder="Укажите фамилию*" required>
+            </label>
+          </div>
+          <div class="form__wrapper">
+            <label class="form__label form__label--text">
+              Отчество:
+              <input class="form__control form__control--text" type="text" name="middle-name" placeholder="Отчество, если желаете">
+            </label>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="form__fieldset">
+          <div class="form__wrapper">
+            <label class="form__label">
+              тел
+              <input class="form__control form__control--tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            </label>
+          </div>
+          <div class="form__wrapper">
+            <label class="form__label">
+              E-mail
+              <input class="form__control form__control--email" type="email" name="email" placeholder="Ваш Email*" required>
+            </label>
+          </div>
+        </fieldset>
+
+
+        <fieldset class="form__fieldset">
+          <label class="form__label form__label--text">
+            Доп
+            <textarea class="form__control form__control--text" name="other" cols="27" rows="9">Опишите все ваши пожелания к заказу
+            </textarea>
+          </label>
+        </fieldset>
+
+
+        <p>
+          <strong class="form__footnote">*Поля обязательны для заполнения</strong>
+        </p>
+
+
+        <button class="form__button" type="submit">отправить заказ</button>
+      </form>
+    </main>
 
     <footer class="page-footer">
       <div class="page-footer__social social">
@@ -56,9 +186,9 @@
       </div>
 
 
-      <div class="page-footer__copyright">
+      <div class="copyright page-footer__copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link button" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип html academy"></a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип html academy"></a>
       </div>
     </footer>
   </body>
