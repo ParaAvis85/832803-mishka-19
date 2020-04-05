@@ -55,9 +55,23 @@
 
 .form__control {
   border: none;
+  width: 250px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   &--textarea {
     border: 2px solid @greyish-brown;
+  }
+
+  &::placeholder {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 18px;
+    color: @greyish-brown-30;
+  }
+
+  &--tel::placeholder {
+    font-size: 19px;
   }
 }
 
@@ -70,6 +84,8 @@
   font-weight: 400;
   line-height: 16px;
   color: @greyish-brown;
+
+  padding-left: 20px;
 }
 
 .form__button {
