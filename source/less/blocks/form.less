@@ -11,6 +11,11 @@
   font-weight: 400;
   line-height: 24px;
   color: @greyish-brown;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .form__fieldset {
@@ -51,19 +56,20 @@
     color: @leftgreen;
     text-transform: uppercase;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+    line-height: 18px;
+  }
 }
 
 .form__control {
   font-family: @font-main;
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 18px;
   font-style: normal;
 
   color: @greyish-brown;
 
   border: none;
-  width: 250px;
   padding-top: 5px;
   padding-bottom: 5px;
 
@@ -76,6 +82,10 @@
     font-weight: 400;
     line-height: 18px;
     color: @greyish-brown-30;
+
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
   }
 
   &--tel::placeholder {
@@ -94,6 +104,11 @@
   color: @greyish-brown;
 
   padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .form__button {
