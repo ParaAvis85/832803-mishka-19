@@ -6,6 +6,16 @@
 
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .reviews__blockquote {
@@ -18,6 +28,11 @@
   line-height: 30px;
   padding-left: 20px;
   color: @greyish-brown;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .reviews__cite {
@@ -27,6 +42,11 @@
   font-style: normal;
   color: @black;
   padding-left: 20px;
+
+  @media (min-width: @tablet-width) and (max-width: @only-tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .reviews__email-link {
