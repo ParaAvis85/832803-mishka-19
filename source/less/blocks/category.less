@@ -56,11 +56,27 @@
 }
 
 .category__list-link-wrapper {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
-  padding-left: 30px;
-  padding-right: 100px;
+  padding-left: 35px;
+  padding-right: 36px;
 }
 
 .category__list-link-text {
   white-space: pre-line;
+}
+
+.category__list-wrapper-image {
+  padding-top: 30px;
+}
+
+.category__list-image {
+  &--interior {
+    fill: @leftgreenbtn;
+  }
+
+  &--toy {
+    fill: @rightgreenbtn;
+  }
 }
