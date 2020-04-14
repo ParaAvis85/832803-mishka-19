@@ -20,6 +20,23 @@
   border: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    &--radio {
+      position: relative;
+      padding-top: 30px;
+    }
+
+    &--colors {
+      position: relative;
+      padding-top: 30px;
+    }
+
+    &--name {
+      position: relative;
+      padding-top: 30px;
+    }
+  }
 }
 
 .form__legend {
@@ -45,11 +62,23 @@
         background-color: @leftgreen;
       }
     }
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
   }
 
   &--checkbox {
     position: relative;
     padding-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
 
     @media (max-width: @only-mobile-width) {
       &::after {
@@ -67,6 +96,12 @@
   &--name {
     position: relative;
     padding-top: 35px;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
 
     @media (max-width: @only-mobile-width) {
       &::after {
@@ -86,10 +121,51 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  &--colors {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .form__item {
   margin-bottom: 15px;
+
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+
+    &--radio {
+      padding-left: 180px;
+      margin-bottom: 40px;
+    }
+
+    &--white {
+      padding-left: 180px;
+    }
+
+    &--grey {
+      padding-left: 60px;
+    }
+
+    &--tiffany {
+      padding-left: 180px;
+    }
+
+    &--black {
+      padding-left: 10px;
+    }
+
+    &--rose {
+      padding-left: 180px;
+    }
+
+    &--orange {
+      padding-left: 37px;
+    }
+  }
 }
 
 .form__label {
@@ -98,6 +174,10 @@
 
   &--text {
     padding-top: 35px;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 30px;
+    }
   }
 
   &--tel {
@@ -232,6 +312,17 @@
   padding-top: 5px;
   padding-bottom: 5px;
 
+  @media (min-width: @tablet-width) {
+    &--text {
+      border-bottom: 2px solid @black;
+      width: 375px;
+    }
+
+    &--name {
+      width: 428px;
+    }
+  }
+
   &--tel {
     padding-right: 30px;
     background-color: transparent;
@@ -266,6 +357,16 @@
   border-bottom: 2px solid @black;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    &--name {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      border: none;
+      padding-left: 140px;
+    }
+  }
 }
 
 .form__footnote {
