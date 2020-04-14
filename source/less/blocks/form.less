@@ -5,8 +5,6 @@
 }
 
 .form__description {
-  padding-left: 38px;
-  padding-right: 38px;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
@@ -20,6 +18,8 @@
 
 .form__fieldset {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .form__legend {
@@ -28,9 +28,52 @@
   line-height: 16px;
   text-transform: uppercase;
 
-  padding-left: 20px;
-
   color: @leftgreen;
+
+  &--radio {
+    position: relative;
+    padding-bottom: 25px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 65px;
+      width: 198px;
+      height: 1px;
+      background-color: @leftgreen;
+    }
+  }
+
+  &--checkbox {
+    position: relative;
+    padding-bottom: 25px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 65px;
+      width: 198px;
+      height: 1px;
+      background-color: @leftgreen;
+    }
+  }
+
+  &--name {
+    position: relative;
+    padding-top: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 41px;
+      left: 65px;
+      width: 198px;
+      height: 1px;
+      background-color: @leftgreen;
+    }
+  }
 }
 
 .form__list {
@@ -47,14 +90,116 @@
   display: inline-block;
   padding-bottom: 15px;
 
-  &--green {
+  &--text {
+    padding-top: 35px;
+  }
+
+  &--tel {
+    position: relative;
     color: @leftgreen;
     text-transform: uppercase;
+    padding-top: 35px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 41px;
+      left: 62px;
+      width: 198px;
+      height: 1px;
+      background-color: @leftgreen;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 65px;
+      right: 2px;
+      width: 26px;
+      height: 26px;
+      background-image: url("../img/icon-phone.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--email {
+    position: relative;
+    color: @leftgreen;
+    text-transform: uppercase;
+    padding-top: 35px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 41px;
+      left: 82px;
+      width: 179px;
+      height: 1px;
+      background-color: @leftgreen;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 60px;
+      right: 3px;
+      width: 32px;
+      height: 26px;
+      background-image: url("../img/icon-mail.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
   }
 
   &--textarea {
+    position: relative;
     color: @leftgreen;
     text-transform: uppercase;
+    padding-top: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 41px;
+      left: 62px;
+      width: 198px;
+      height: 1px;
+      background-color: @leftgreen;
+    }
+  }
+
+  &--radio {
+    position: relative;
+    padding-left: 65px;
+    padding-right: 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid  @leftgreen;
+      border-radius: 50%;
+    }
+  }
+
+  &--checkbox {
+    position: relative;
+    padding-left: 65px;
+    padding-right: 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid  @greyish-brown;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -69,9 +214,20 @@
 
   color: @greyish-brown;
 
+  width: 260px;
   border: none;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  &--tel {
+    padding-right: 30px;
+    background-color: transparent;
+  }
+
+  &--email {
+    background-color: transparent;
+    padding-right: 30px;
+  }
 
   &--textarea {
     border: 2px solid @greyish-brown;
@@ -95,6 +251,8 @@
 
 .form__wrapper {
   border-bottom: 2px solid @black;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__footnote {
@@ -102,8 +260,6 @@
   font-weight: 400;
   line-height: 16px;
   color: @greyish-brown;
-
-  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
@@ -117,13 +273,14 @@
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #444444;
   background-color: @white;
 
-  margin-left: 18px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 260px;
+  min-height: 52px;
+
   padding-top: 13px;
   padding-bottom: 13px;
   border: 2px solid #444444;

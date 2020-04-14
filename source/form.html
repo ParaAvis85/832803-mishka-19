@@ -67,7 +67,7 @@
 
   <main>
     <h1 class="page-title">Вязание на заказ</h1>
-    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="form container" action="https://echo.htmlacademy.ru" method="POST">
       <p class="form__description">
         Мы будем рады воплотить в жизнь
         ваши пожелания! Заполните простую
@@ -75,18 +75,18 @@
         чтобы уточнить детали.
       </p>
       <fieldset class="form__fieldset">
-        <legend class="form__legend">Тип</legend>
+        <legend class="form__legend form__legend--radio">Тип</legend>
         <ul class="form__list">
           <li class="form__item">
-            <label class="form__label">
-              <input class="form__control form__control--radio" type="radio" name="type" value="accessories" checked>
+            <label class="form__label form__label--radio">
+              <input class="form__control form__control--radio visually-hidden" type="radio" name="type" value="accessories" checked>
               Аксессуар для
               интерьера
             </label>
           </li>
           <li class="form__item">
-            <label class="form__label">
-              <input class="form__control form__control--radio" type="radio" name="type" value="toys">
+            <label class="form__label form__label--radio">
+              <input class="form__control form__control--radio visually-hidden" type="radio" name="type" value="toys">
               Детская игрушка
             </label>
           </li>
@@ -95,98 +95,95 @@
 
 
       <fieldset class="form__fieldset">
-        <legend class="form__legend">Цвет</legend>
+        <legend class="form__legend form__legend--checkbox">Цвет</legend>
         <ul class="form__list">
           <li class="form__item">
-            <label class="form__label form__label--checkbox">
-              <input class="form__control form__control--checkbox" type="checkbox" name="color" value="white" checked>
+            <label class="form__label form__label--checkbox" for="white">
               Белый
             </label>
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="white" name="color" value="white" checked>
           </li>
           <li class="form__item">
-            <label class="form__label form__label--checkbox">
-              <input class="form__control form__control--checkbox" type="checkbox" name="color" value="grey" checked>
+            <label class="form__label form__label--checkbox" for="grey">
               Серый
             </label>
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="grey" name="color" value="grey" checked>
           </li>
           <li class="form__item">
-            <label class="form__label form__label--checkbox">
-              <input class="form__control form__control--checkbox" type="checkbox" name="color" value="tiffany">
+            <label class="form__label form__label--checkbox" for="tiffany">
               «Тиффани»
             </label>
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="tiffany" name="color" value="tiffany">
           </li>
           <li class="form__item">
-            <label class="form__label form__label--checkbox">
-              <input class="form__control form__control--checkbox" type="checkbox" name="color" value="black">
+            <label class="form__label form__label--checkbox" for="black">
               Черный
             </label>
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="black" name="color" value="black">
           </li>
           <li class="form__item">
-            <label class="form__label form__label--checkbox">
-              <input class="form__control form__control--checkbox" type="checkbox" name="color" value="rose">
+            <label class="form__label form__label--checkbox" for="rose">
               Розовый
             </label>
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="rose" name="color" value="rose">
           </li>
           <li class="form__item">
-            <label class="form__label form__label--checkbox">
-              <input class="form__control form__control--checkbox" type="checkbox" name="color" value="orange">
+            <label class="form__label form__label--checkbox" for="orange">
               Оранжевый
             </label>
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="orange" name="color" value="orange">
           </li>
         </ul>
       </fieldset>
 
 
       <fieldset class="form__fieldset">
-        <legend class="form__legend">ФИО</legend>
+        <legend class="form__legend form__legend--name">ФИО</legend>
         <div class="form__wrapper">
-          <label class="form__label form__label--text">
+          <label class="form__label form__label--text" for="name">
             Имя:
-            <input class="form__control form__control--text" type="text" name="first-name"
-              placeholder="Введите ваше имя*" required>
           </label>
+          <input class="form__control form__control--text" type="text" id="name" name="first-name" placeholder="Введите ваше имя*" required>
         </div>
         <div class="form__wrapper">
-          <label class="form__label form__label--text">
+          <label class="form__label form__label--text" for="last-name">
             Фамилия:
-            <input class="form__control form__control--text" type="text" name="last-name" placeholder="Укажите фамилию*"
-              required>
           </label>
+          <input class="form__control form__control--text" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
         </div>
         <div class="form__wrapper">
-          <label class="form__label form__label--text">
+          <label class="form__label form__label--text" for="middle-name">
             Отчество:
-            <input class="form__control form__control--text" type="text" name="middle-name"
-              placeholder="Отчество, если желаете">
           </label>
+          <input class="form__control form__control--text" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
         </div>
       </fieldset>
 
 
       <fieldset class="form__fieldset">
         <div class="form__wrapper">
-          <label class="form__label form__label--green">
+          <label class="form__label form__label--tel" for="tel">
             тел
-            <input class="form__control form__control--tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-              required>
           </label>
+          <input class="form__control form__control--tel" type="tel" id="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+              required>
         </div>
         <div class="form__wrapper">
-          <label class="form__label form__label--green">
+          <label class="form__label form__label--email" for="email">
             E-mail
-            <input class="form__control form__control--email" type="email" name="email" placeholder="Ваш Email*"
-              required>
           </label>
+          <input class="form__control form__control--email" type="email" id="email" name="email" placeholder="Ваш Email*"
+              required>
         </div>
       </fieldset>
 
 
       <fieldset class="form__fieldset">
-        <label class="form__label form__label--textarea">
+        <label class="form__label form__label--textarea" for="other">
           Доп
-          <textarea class="form__control form__control--textarea" name="other" cols="27" rows="9"
-            placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </label>
+        <textarea class="form__control form__control--textarea" name="other" id="other" cols="27" rows="9"
+            placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
 
 
