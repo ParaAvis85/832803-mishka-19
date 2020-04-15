@@ -67,7 +67,8 @@
 
   <main>
     <h1 class="page-title">Вязание на заказ</h1>
-    <form class="form container" action="https://echo.htmlacademy.ru" method="POST">
+    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+      <div class="container">
       <p class="form__description">
         Мы будем рады воплотить в жизнь
         ваши пожелания! Заполните простую
@@ -92,8 +93,10 @@
           </li>
         </ul>
       </fieldset>
+    </div>
 
-
+    <div class="form__fieldset--bgcolor">
+    <div class="container">
       <fieldset class="form__fieldset form__fieldset--colors">
         <legend class="form__legend form__legend--checkbox">Цвет</legend>
         <ul class="form__list form__list--colors">
@@ -135,8 +138,10 @@
           </li>
         </ul>
       </fieldset>
+    </div>
+  </div>
 
-
+    <div class="container">
       <fieldset class="form__fieldset form__fieldset--name">
         <legend class="form__legend form__legend--name">ФИО</legend>
         <div class="form__wrapper form__wrapper--name">
@@ -158,39 +163,46 @@
           <input class="form__control form__control--text" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
         </div>
       </fieldset>
+      </div>
 
 
-      <fieldset class="form__fieldset">
-        <div class="form__wrapper form__wrapper--tel">
-          <label class="form__label form__label--tel" for="tel">
-            тел
-          </label>
-          <input class="form__control form__control--tel" type="tel" id="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-              required>
+      <div class="form__fieldset--bgcolor">
+        <div class="container">
+          <fieldset class="form__fieldset form__fieldset--tool">
+            <div class="form__wrapper form__wrapper--tel">
+              <label class="form__label form__label--tel" for="tel">
+                тел
+              </label>
+              <input class="form__control form__control--tel" type="tel" id="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+                required>
+            </div>
+            <div class="form__wrapper form__wrapper--email">
+              <label class="form__label form__label--email" for="email">
+                E-mail
+              </label>
+                <input class="form__control form__control--email" type="email" id="email" name="email" placeholder="Ваш Email*"
+                  required>
+            </div>
+          </fieldset>
         </div>
-        <div class="form__wrapper form__wrapper--email">
-          <label class="form__label form__label--email" for="email">
-            E-mail
+      </div>
+
+
+      <div class="container">
+        <fieldset class="form__fieldset form__fieldset--textarea">
+          <label class="form__label form__label--textarea" for="other">
+            Доп
           </label>
-          <input class="form__control form__control--email" type="email" id="email" name="email" placeholder="Ваш Email*"
-              required>
+          <textarea class="form__control form__control--textarea" name="other" id="other" cols="27" rows="9"
+              placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+
+        <div class="form__footnote-wrapper">
+          <p>
+            <strong class="form__footnote">*Поля обязательны для заполнения</strong>
+          </p>
+          <button class="form__button" type="submit">отправить заказ</button>
         </div>
-      </fieldset>
-
-
-      <fieldset class="form__fieldset form__fieldset--textarea">
-        <label class="form__label form__label--textarea" for="other">
-          Доп
-        </label>
-        <textarea class="form__control form__control--textarea" name="other" id="other" cols="27" rows="9"
-            placeholder="Опишите все ваши пожелания к заказу"></textarea>
-      </fieldset>
-
-      <div class="form__footnote-wrapper">
-        <p>
-          <strong class="form__footnote">*Поля обязательны для заполнения</strong>
-        </p>
-        <button class="form__button" type="submit">отправить заказ</button>
       </div>
     </form>
   </main>
