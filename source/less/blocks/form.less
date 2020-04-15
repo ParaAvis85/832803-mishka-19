@@ -36,6 +36,10 @@
       position: relative;
       padding-top: 30px;
     }
+
+    &--textarea {
+      position: relative;
+    }
   }
 }
 
@@ -172,6 +176,11 @@
   display: inline-block;
   padding-bottom: 15px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
   &--text {
     padding-top: 35px;
 
@@ -185,6 +194,11 @@
     color: @leftgreen;
     text-transform: uppercase;
     padding-top: 35px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     @media (max-width: @only-mobile-width) {
       &::before {
@@ -208,6 +222,12 @@
       background-image: url("../img/icon-phone.svg");
       background-position: 0 0;
       background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        right: 0;
+        left: 620px;
+        top: 0;
+      }
     }
   }
 
@@ -216,6 +236,11 @@
     color: @leftgreen;
     text-transform: uppercase;
     padding-top: 35px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     @media (max-width: @only-mobile-width) {
       &::before {
@@ -240,24 +265,11 @@
       background-image: url("../img/icon-mail.svg");
       background-position: 0 0;
       background-repeat: no-repeat;
-    }
-  }
 
-  &--textarea {
-    position: relative;
-    color: @leftgreen;
-    text-transform: uppercase;
-    padding-top: 35px;
-
-    @media (max-width: @only-mobile-width) {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 41px;
-        left: 65px;
-        width: 198px;
-        height: 1px;
-        background-color: @leftgreen;
+      @media (min-width: @tablet-width) {
+        right: 0;
+        left: 615px;
+        top: 0;
       }
     }
   }
@@ -295,9 +307,29 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
-    font-size: 19px;
-    line-height: 18px;
+  &--textarea {
+    position: relative;
+    color: @leftgreen;
+    text-transform: uppercase;
+    padding-top: 35px;
+
+    @media (max-width: @only-mobile-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 41px;
+        left: 65px;
+        width: 198px;
+        height: 1px;
+        background-color: @leftgreen;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
   }
 }
 
@@ -326,15 +358,31 @@
   &--tel {
     padding-right: 30px;
     background-color: transparent;
+
+    @media (min-width: @tablet-width) {
+      width: 500px;
+      border-bottom: 2px solid @black;
+    }
   }
 
   &--email {
     background-color: transparent;
     padding-right: 30px;
+
+    @media (min-width: @tablet-width) {
+      width: 500px;
+      border-bottom: 2px solid @black;
+    }
   }
 
   &--textarea {
     border: 2px solid @greyish-brown;
+
+    @media (min-width: @tablet-width) {
+      width: 500px;
+      margin-top: 50px;
+      margin-left: 170px;
+    }
   }
 
   &::placeholder {
@@ -366,7 +414,28 @@
       border: none;
       padding-left: 140px;
     }
+
+    &--tel {
+      flex-direction: row;
+      justify-content: space-between;
+      border: none;
+      margin-top: 40px;
+    }
+
+    &--email {
+      flex-direction: row;
+      justify-content: space-between;
+      border: none;
+      margin-top: 40px;
+    }
   }
+}
+
+.form__footnote-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-top: 30px;
 }
 
 .form__footnote {
@@ -399,4 +468,8 @@
   padding-bottom: 13px;
   border: 2px solid #444444;
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+  }
 }
