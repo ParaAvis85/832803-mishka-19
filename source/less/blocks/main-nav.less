@@ -17,6 +17,11 @@
     width: @tablet-width;
     justify-content: left;
   }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    justify-content: center;
+  }
 }
 
 .main-nav__list-wrapper {
@@ -27,6 +32,10 @@
     flex-direction: row;
     width: @tablet-width;
     margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
   }
 }
 
@@ -42,6 +51,10 @@
     &--hide {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
   }
 }
 
