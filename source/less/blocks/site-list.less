@@ -1,31 +1,20 @@
 .site-list {
   @media (min-width: @tablet-width) {
     &--left {
-      width: 512px;
       display: flex;
       flex-direction: row;
-      margin: 0;
-      padding: 0;
+      order: 0;
     }
 
     &--right {
-      position: absolute;
-      top: 0;
       display: flex;
-      width: @tablet-width;
-      justify-content: flex-end;
+      order: -1;
     }
   }
 
   @media (min-width: @desktop-width) {
     &--left {
-      position: absolute;
-      top: 0;
-    }
-
-    &--right {
-      transform: translate(125%, 0);
-      width: 512px;
+      order: -2;
     }
   }
 }
@@ -61,10 +50,7 @@
     margin: 0;
     padding-top: 12px;
     padding-bottom: 5px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 520px;
+    padding-right: 30px;
   }
 }
 
