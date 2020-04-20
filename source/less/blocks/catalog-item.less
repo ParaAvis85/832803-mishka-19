@@ -1,5 +1,66 @@
+.catalog-item {
+  @media (min-width: @tablet-width) and (max-width: @only-tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-of-type(1) .catalog-item__description,
+    &:nth-of-type(2) .catalog-item__description {
+      margin-bottom: 24px;
+    }
+  }
+}
+
 .catalog-item__link-image {
+  display: block;
+  line-height: 0;
   margin-bottom: 0;
+}
+
+.catalog-item__image {
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+    height: 462px;
+  }
+}
+
+.catalog-item__wrapper {
+  border: 1px solid @white-g;
+  margin: 0;
+  padding-top: 27px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 335px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+  }
+
+  &--middle {
+    margin-bottom: 41px;
+  }
+
+  &--bottom {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+  }
 }
 
 .catalog-item__short-title {
@@ -8,12 +69,12 @@
   line-height: 24px;
 
   margin: 0;
-  padding-top: 20px;
-  text-align: center;
 
-  border-top: 2px solid @footer;
-  border-left: 2px solid @footer;
-  border-right: 2px solid @footer;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .catalog-item__description {
@@ -22,26 +83,41 @@
   line-height: 30px;
 
   margin: 0;
-  padding-left: 40px;
-  padding-bottom: 10px;
-
-  border-left: 2px solid @footer;
-  border-right: 2px solid @footer;
 
   color: @greyish-brown;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .catalog-item__price {
+  position: relative;
   font-size: 15px;
   font-weight: 700;
   line-height: 24px;
 
   margin: 0;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-bottom: 20px;
 
-  border-bottom: 2px solid @footer;
-  border-left: 2px solid @footer;
-  border-right: 2px solid @footer;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 204px;
+    height: 1px;
+    background-color: @white-g;
+
+    @media (min-width: @tablet-width) {
+      width: 268px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.catalog-item__button-cart {
+  opacity: 0.2;
 }

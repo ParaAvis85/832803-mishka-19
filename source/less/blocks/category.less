@@ -1,26 +1,128 @@
+.category {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: @bgcolor-main;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .category::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: 41% 0%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .category::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: 43% 0%;
+  }
+}
+
 .category__list {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.category__list-item {
+  @media (max-width: @only-mobile-width) {
+    display: flex;
+    justify-content: center;
+
+    &--left {
+      background-color: @leftgreen;
+    }
+
+    &--right {
+      background-color: @rightgreen;
+    }
+  }
 }
 
 .category__list-link {
   display: block;
+  min-height: 103px;
   font-size: 19px;
   font-weight: bold;
   line-height: 24px;
   color: @white;
-  text-align: left;
+
+  &--left {
+    background-color: @leftgreen;
+    width: 320px;
+
+    @media (min-width: @tablet-width) {
+      width: 334px;
+      min-height: 119px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 525px;
+    }
+  }
+
+  &--right {
+    background-color: @rightgreen;
+    width: 320px;
+
+    @media (min-width: @tablet-width) {
+      width: 334px;
+      min-height: 119px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 525px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.category__list-link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 36px;
+  padding-bottom: 25px;
+}
+
+.category__list-link-text {
+  white-space: pre-line;
+}
+
+.category__list-wrapper-image {
   padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 150px;
-  padding-left: 25px;
 }
 
-.category__list-link--left {
-  background-color: @leftgreen;
-}
+.category__list-image {
+  &--interior {
+    fill: @leftgreenbtn;
+  }
 
-.category__list-link--right {
-  background-color: @rightgreen;
+  &--toy {
+    fill: @rightgreenbtn;
+  }
 }
