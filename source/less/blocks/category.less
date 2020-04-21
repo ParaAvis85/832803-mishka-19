@@ -104,9 +104,10 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding-left: 35px;
-  padding-right: 36px;
-  padding-bottom: 25px;
+  padding-top: 1px;
+  padding-left: 30px;
+  padding-right: 27px;
+  padding-bottom: 4px;
 }
 
 .category__list-link-text {
@@ -114,7 +115,13 @@
 }
 
 .category__list-wrapper-image {
-  padding-top: 30px;
+  padding-top: 24px;
+
+  @media (max-width: @only-tablet-width) {
+    &--left {
+      padding-right: 9px;
+    }
+  }
 }
 
 .category__list-image {

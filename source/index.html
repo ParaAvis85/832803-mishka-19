@@ -6,6 +6,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Pixel Glass -->
+  <style>
+
+  html {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* Mobile layout by default */
+    background-image: url("img/pp/mishka-index-mobile-menu.png");
+  }
+  /* Tablet */
+  @media (min-width: 768px) {
+    html {
+      /* Tablet layout */
+      background-image: url("img/pp/mishka-index-tablet.png");
+    }
+  }
+  /* Desktop */
+  @media (min-width: 1150px) {
+    html {
+      /* Desktop layout */
+      background-image: url("img/pp/mishka-index-desktop.png");
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -65,7 +92,7 @@
             <a class="site-list__link site-list__link--search" href="#">Поиск по сайту</a>
           </li>
           <li class="site-list__item site-list__item--right">
-            <a class="site-list__link site-list__link--cart" href="#">Корзина:<span>пока пуста</span></a>
+            <a class="site-list__link site-list__link--cart" href="#">Корзина:<span class="site-list__item-stll">пока пуста</span></a>
           </li>
         </ul>
 
@@ -102,7 +129,7 @@
                 Предметы
                 интерьера
               </span>
-              <span class="category__list-wrapper-image">
+              <span class="category__list-wrapper-image category__list-wrapper-image--left">
                 <svg class="category__list-image--interior" version="1.1" id="svg4488"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="40.219px" height="62.411px" viewBox="-259.404 -19.675 40.219 62.411"
