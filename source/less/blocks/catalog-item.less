@@ -47,19 +47,20 @@
   @media (min-width: @desktop-width) {
     width: 316px;
   }
+}
 
-  &--middle {
-    margin-bottom: 41px;
-  }
+.catalog-item__wrapper-middle {
+  margin-bottom: 41px;
+}
 
-  &--bottom {
-    display: flex;
-    justify-content: space-between;
+.catalog-item__wrapper-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid @white-g;
 
-    @media (min-width: @tablet-width) {
-      padding-left: 3px;
-      padding-right: 3px;
-    }
+  @media (min-width: @tablet-width) {
+    padding-left: 3px;
+    padding-right: 3px;
   }
 }
 
@@ -98,20 +99,6 @@
   line-height: 24px;
 
   margin: 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 204px;
-    height: 1px;
-    background-color: @white-g;
-
-    @media (min-width: @tablet-width) {
-      width: 268px;
-    }
-  }
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
