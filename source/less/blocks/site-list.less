@@ -32,6 +32,12 @@
   @media (min-width: @tablet-width) {
     border: none;
   }
+
+  @media (min-width: @desktop-width) {
+    &--hide {
+      padding-right: 9px;
+    }
+  }
 }
 
 .site-list__point {
@@ -136,9 +142,10 @@
     }
 
     &--hide {
-      padding-left: 45px;
-      padding-top: 17px;
+      padding-left: 52px;
+      padding-top: 16px;
       padding-bottom: 0;
+      font-size: 15px;
     }
 
     &--border {
