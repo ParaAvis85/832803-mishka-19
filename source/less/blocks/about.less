@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     width: 319px;
+    top: 16px;
     height: 6px;
     background-size: 319px 110%;
     transform: rotate(180deg);
@@ -21,7 +22,7 @@
     @media (min-width: @tablet-width) {
       width: 771px;
       height: 15px;
-      top: -7px;
+      top: 10px;
       background-size: 100% 104%;
     }
 
@@ -40,18 +41,22 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 49px;
+  margin-bottom: 86px;
   color: @black;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 104px;
+    padding-top: 74px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
-    padding-left: 130px;
+    padding-left: 172px;
+    padding-top: 88px;
   }
 }
 
@@ -67,8 +72,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 850px;
-    padding-left: 130px;
+    width: 875px;
+    padding-left: 175px;
   }
 }
 
@@ -77,37 +82,75 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  padding-top: 77px;
+  margin-bottom: 83px;
   color: @black;
 
   &--flower {
     order: -3;
-    padding-right: 130px;
+    padding-right: 85px;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 110px;
+      margin-bottom: 110px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 120px;
+    }
   }
 
   &--money {
     order: -1;
-    padding-right: 100px;
+    padding-right: 60px;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 75px;
+      margin-bottom: 110px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 100px;
+    }
   }
 
   &--heart {
     order: 1;
-    padding-right: 120px;
+    padding-right: 70px;
+
+    @media (min-width: @tablet-width) {
+      padding-right: 95px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 110px;
+    }
   }
 
   &--ball {
     order: -2;
-    padding-right: 70px;
+    padding-right: 45px;
+
+    @media (min-width: @desktop-width) {
+      padding-right: 50px;
+    }
   }
 
   &--rocket {
     order: 0;
     padding-right: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 110px;
+    }
   }
 
   &--gift {
     order: 2;
-    padding-right: 70px;
+    padding-right: 45px;
+
+    @media (min-width: @desktop-width) {
+      padding-right: 60px;
+    }
   }
 
   &--flower::before {
@@ -118,8 +161,12 @@
     background-image: url("../img/icon-feature-flower.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 20px;
+    bottom: 55px;
     left: 6px;
+
+    @media (min-width: @tablet-width) {
+      bottom: 60px;
+    }
   }
 
   &--money::before {
@@ -130,8 +177,12 @@
     background-image: url("../img/icon-feature-money.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 20px;
-    left: 0;
+    bottom: 63px;
+    left: -2px;
+
+    @media (min-width: @tablet-width) {
+      bottom: 67px;
+    }
   }
 
   &--heart::before {
@@ -142,8 +193,12 @@
     background-image: url("../img/icon-feature-heart.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 20px;
+    bottom: 59px;
     left: 6px;
+
+    @media (min-width: @tablet-width) {
+      bottom: 62px;
+    }
   }
 
   &--ball::before {
@@ -154,8 +209,13 @@
     background-image: url("../img/icon-feature-ball.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 20px;
-    left: 0;
+    bottom: 56px;
+    left: 2px;
+
+    @media (min-width: @tablet-width) {
+      bottom: 87px;
+      left: 1px;
+    }
   }
 
   &--rocket::before {
@@ -166,8 +226,12 @@
     background-image: url("../img/icon-feature-rocket.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 20px;
-    left: -5px;
+    bottom: 67px;
+    left: -8px;
+
+    @media (min-width: @tablet-width) {
+      bottom: 69px;
+    }
   }
 
   &--gift::before {
@@ -178,8 +242,8 @@
     background-image: url("../img/icon-feature-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: 20px;
-    left: -2px;
+    bottom: 61px;
+    left: 1px;
   }
 
   @media (min-width: @tablet-width) {
