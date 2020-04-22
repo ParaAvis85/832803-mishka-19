@@ -262,17 +262,21 @@
         <div class="contacts__adress-wrapper">
           <p class="contacts__adress-p">адрес:</p>
           <address class="contacts__adress">
-            г. Санкт-Петербург,
-            ул. Большая Конюшенная,
+            г. Санкт-Петербург,<br class="contacts__break contacts__break--top">
+            ул. Большая Конюшенная,<br class="contacts__break contacts__break--middle">
             д. 19/8, офис 101
           </address>
         </div>
       </div>
       </div>
       <div class="contacts__map-image-wrapper">
-        <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="карта адрес г. Санкт-Петербург,
-          ул. Большая Конюшенная,
-          д. 19/8, офис 101">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
+          <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="карта адрес г. Санкт-Петербург,
+            ул. Большая Конюшенная,
+            д. 19/8, офис 101">
+        </picture>
       </div>
       <div class="contacts__button-wrapper">
         <a class="contacts__button">Напишите нам</a>
