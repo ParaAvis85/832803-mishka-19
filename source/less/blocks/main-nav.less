@@ -43,31 +43,10 @@
     width: @tablet-width;
     margin: 0 auto;
     padding-top: 10px;
-
-    &::after {
-      content: " ";
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      width: 768px;
-      height: 1px;
-      margin-left: 0;
-      background-color: #e5e5e5;
-    }
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-
-    &::after {
-      content: " ";
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      width: 1150px;
-      margin-left: -575px;
-      background-color: #e5e5e5;
-    }
   }
 }
 
