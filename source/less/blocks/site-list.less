@@ -32,6 +32,12 @@
   @media (min-width: @tablet-width) {
     border: none;
   }
+
+  @media (min-width: @desktop-width) {
+    &--hide {
+      padding-right: 9px;
+    }
+  }
 }
 
 .site-list__point {
@@ -48,17 +54,24 @@
     font-weight: 400;
     color: @greyish-brown;
     margin: 0;
-    padding-top: 12px;
-    padding-bottom: 5px;
-    padding-right: 30px;
+    padding-top: 17px;
+    padding-bottom: 0;
+    padding-right: 49px;
+    z-index: 1;
   }
 }
 
 .site-list__link {
   display: block;
   padding-top: 26px;
-  padding-bottom: 29px;
+  padding-bottom: 28px;
   padding-left: 75px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 21px;
+    padding-bottom: 33px;
+    padding-left: 82px;
+  }
 
   &--search {
     position: relative;
@@ -66,8 +79,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 27px;
-      left: 38px;
+      top: 31px;
+      left: 32px;
       width: 22px;
       height: 22px;
       background-image: url("../img/icon-search.svg");
@@ -82,25 +95,30 @@
     &::before {
       content: "";
       position: absolute;
-      top: 27px;
-      left: 38px;
+      top: 30px;
+      left: 31px;
       width: 23px;
       height: 23px;
       background-image: url("../img/icon-cart.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
+
+      @media (min-width: @tablet-width) {
+        top: 25px;
+      }
     }
   }
 
   @media (min-width: @tablet-width) {
     &--left {
-      padding-left: 29px;
-      padding-top: 12px;
-      padding-bottom: 5px;
+      padding-left: 43px;
+      padding-top: 17px;
+      padding-bottom: 0;
+      font-size: 15px;
     }
 
     &--cart {
-      padding-right: 48px;
+      padding-right: 50px;
     }
 
     &--search {
@@ -109,24 +127,26 @@
       border-right: 1px solid @white-g;
 
       &::before {
-        top: 30px;
-        left: 30px;
+        top: 27px;
+        left: 32px;
       }
     }
   }
 
   @media (min-width: @desktop-width) {
     &--left {
-      padding-top: 26px;
+      padding-top: 22px;
       padding-bottom: 29px;
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 49px;
+      padding-right: 23px;
+      font-size: 17px;
     }
 
     &--hide {
-      padding-left: 29px;
-      padding-top: 12px;
-      padding-bottom: 5px;
+      padding-left: 52px;
+      padding-top: 16px;
+      padding-bottom: 0;
+      font-size: 15px;
     }
 
     &--border {
@@ -136,11 +156,17 @@
         content: "";
         position: absolute;
         top: 0;
-        right: 0;
+        right: -14px;
         height: 80px;
         width: 1px;
         background-color: @white-g;
       }
     }
+  }
+}
+
+.site-list__item-stll {
+  @media (min-width: @mobile-width) {
+    padding-left: 5px;
   }
 }

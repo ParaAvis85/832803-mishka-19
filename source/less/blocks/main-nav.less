@@ -20,12 +20,14 @@
     position: relative;
     order: -2;
     align-self: center;
-    padding-left: 20px;
+    padding-left: 49px;
     padding-right: 20px;
   }
 
   @media (min-width: @desktop-width) {
     order: -1;
+    padding-left: 0;
+    padding-right: 48px;
   }
 }
 
@@ -40,31 +42,11 @@
     justify-content: space-between;
     width: @tablet-width;
     margin: 0 auto;
-
-    &::after {
-      content: " ";
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      width: 768px;
-      height: 1px;
-      margin-left: 0;
-      background-color: #e5e5e5;
-    }
+    padding-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-
-    &::after {
-      content: " ";
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      width: 1150px;
-      margin-left: -575px;
-      background-color: #e5e5e5;
-    }
   }
 }
 
@@ -72,6 +54,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  z-index: 1;
 
   &--hide {
     display: none;
@@ -90,8 +73,8 @@
 .main-nav__toggle {
   @media (max-width: @only-mobile-width) {
     position: absolute;
-    top: 25px;
-    right: 20px;
+    top: 29px;
+    right: 30px;
     margin: 0;
     padding: 0;
     background-color: transparent;
