@@ -21,8 +21,7 @@
   @media (min-width: @desktop-width) {
     padding-left: 175px;
     padding-right: 175px;
-
-    padding-top: 100px;
+    padding-top: 94px;
   }
 }
 
@@ -57,7 +56,7 @@
 
   &--tool {
     @media (max-width: @tablet-width) {
-      margin-bottom: 32px;
+      margin-bottom: 0;
     }
   }
 
@@ -115,7 +114,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 70px;
+      left: 64px;
     }
   }
 
@@ -130,7 +129,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 70px;
+      left: 60px;
     }
 
     @media (max-width: @only-mobile-width) {
@@ -157,7 +156,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 70px;
+      left: 62px;
     }
 
     @media (max-width: @only-mobile-width) {
@@ -232,21 +231,28 @@
       padding-left: 27px;
       padding-bottom: 29px;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 37px;
+    }
   }
 
   &--tel {
     position: relative;
     color: @leftgreen;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    line-height: 16px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 4px;
+      font-size: 17px;
+      line-height: 16px;
+      padding-top: 7px;
       padding-bottom: 0;
     }
 
     @media (min-width: @desktop-width) {
-      padding-left: 70px;
+      padding-left: 63px;
     }
 
     @media (max-width: @only-mobile-width) {
@@ -274,11 +280,11 @@
 
       @media (min-width: @tablet-width) {
         right: 0;
-        left: 620px;
+        left: 617px;
         top: 0;
 
         @media (min-width: @desktop-width) {
-          left: 790px;
+          left: 842px;
         }
       }
     }
@@ -288,15 +294,20 @@
     position: relative;
     color: @leftgreen;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+
+    line-height: 16px;
 
     @media (min-width: @tablet-width) {
+      font-size: 17px;
+      line-height: 16px;
       padding-top: 5px;
       padding-bottom: 0;
     }
 
     @media (min-width: @desktop-width) {
-      padding-left: 70px;
+      padding-top: 7px;
+      padding-left: 61px;
     }
 
     @media (max-width: @only-mobile-width) {
@@ -330,7 +341,7 @@
       }
 
       @media (min-width: @desktop-width) {
-        left: 785px;
+        left: 838px;
       }
     }
   }
@@ -342,6 +353,10 @@
 
     @media (min-width: @tablet-width) {
       padding-left: 107px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 115px;
     }
 
     &::after {
@@ -360,6 +375,10 @@
         width: 53px;
         height: 53px;
       }
+
+      @media (min-width: @desktop-width) {
+        left: 34px;
+      }
     }
   }
 
@@ -372,14 +391,30 @@
       padding-left: 107px;
     }
 
+    @media (min-width: @desktop-width) {
+      padding-left: 116px;
+    }
+
     &::after {
       content: "";
       position: absolute;
-      top: -15px;
-      left: 28px;
-      width: 52px;
-      height: 52px;
+      top: -13px;
+      left: 0;
+      width: 40px;
+      height: 40px;
       border: 2px solid  @greyish-brown;
+
+      @media (min-width: @tablet-width) {
+        top: -15px;
+        left: 28px;
+        width: 52px;
+        height: 52px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -16px;
+        left: 36px;
+      }
     }
   }
 
@@ -388,6 +423,8 @@
     color: @leftgreen;
     text-transform: uppercase;
     margin-bottom: 24px;
+
+    line-height: 16px;
 
     @media (max-width: @only-mobile-width) {
       &::after {
@@ -402,13 +439,15 @@
     }
 
     @media (min-width: @tablet-width) {
+      font-size: 17px;
+      line-height: 16px;
       position: absolute;
-      top: 80px;
+      top: 67px;
       left: 0;
     }
 
     @media (min-width: @desktop-width) {
-      padding-left: 70px;
+      padding-left: 63px;
     }
   }
 }
@@ -430,7 +469,7 @@
       width: 375px;
 
       @media (min-width: @desktop-width) {
-        width: 515px;
+        width: 574px;
       }
     }
 
@@ -438,7 +477,7 @@
       width: 428px;
 
       @media (min-width: @desktop-width) {
-        width: 565px;
+        width: 626px;
       }
     }
   }
@@ -453,8 +492,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      width: 645px;
-      margin-right: 227px;
+      width: 700px;
+      margin-right: 175px;
     }
   }
 
@@ -468,26 +507,34 @@
     }
 
     @media (min-width: @desktop-width) {
-      width: 645px;
-      margin-right: 227px;
+      width: 700px;
+      margin-right: 175px;
     }
   }
 
   &--textarea {
     border: 2px solid @greyish-brown;
-    padding-right: 14px;
-    padding-left: 14px;
     padding-top: 15px;
     padding-bottom: 27px;
+
+    &::placeholder {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
 
     @media (min-width: @tablet-width) {
       width: 500px;
       margin-top: 50px;
-      margin-left: 170px;
+      margin-left: 168px;
+
+      &::placeholder {
+        margin-left: 0;
+      }
     }
 
     @media (min-width: @desktop-width) {
-      width: 655px;
+      width: 700px;
+      margin-left: 175px;
     }
   }
 
@@ -521,6 +568,10 @@
     margin-bottom: 32px;
   }
 
+  &--email {
+    margin-bottom: 32px;
+  }
+
   @media (min-width: @tablet-width) {
     &--name {
       display: flex;
@@ -533,8 +584,8 @@
       flex-direction: row;
       justify-content: space-between;
       border: none;
-      margin-top: 62px;
-      margin-bottom: 34px;
+      margin-top: 61px;
+      margin-bottom: 35px;
     }
 
     &--email {
@@ -547,20 +598,25 @@
 }
 
 .form__footnote-wrapper {
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 
   @media (min-width: @tablet-width) {
 
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 51px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
   }
 }
 
 .form__footnote-para {
-  margin-top: 0;
-  margin-bottom: 31px;
+  margin-top: 9px;
+  margin-bottom: 30px;
 }
 
 .form__footnote {
@@ -575,7 +631,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 220px;
+    margin-right: 173px;
   }
 }
 
@@ -603,6 +659,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 170px;
+    margin-left: 175px;
   }
 }

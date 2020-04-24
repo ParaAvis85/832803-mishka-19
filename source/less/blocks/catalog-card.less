@@ -15,16 +15,22 @@
   margin-top: 29px;
   margin-bottom: 30px;
 
+  @media (min-width: @desktop-width) {
+    margin-top: 100px;
+  }
+
   &--bottom {
     margin-bottom: 0;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 54px;
-
+  @media (min-width: @tablet-width) and (max-width: @only-tablet-width) {
     &--top {
       margin-top: 82px;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
 
     &--bottom {
       margin-bottom: 3px;
