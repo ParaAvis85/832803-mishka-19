@@ -31,6 +31,24 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+
+    &--right {
+      box-shadow: inset 1px 0 0 0 #e5e5e5;
+    }
+
+    &--border {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -14px;
+        height: 80px;
+        width: 1px;
+        background-color: @white-g;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -66,6 +84,18 @@
   padding-top: 26px;
   padding-bottom: 28px;
   padding-left: 75px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--non-clickable {
+    pointer-events: none;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 21px;
@@ -123,8 +153,6 @@
 
     &--search {
       font-size: 0;
-      border-left: 1px solid @white-g;
-      border-right: 1px solid @white-g;
 
       &::before {
         top: 27px;
@@ -147,20 +175,6 @@
       padding-top: 16px;
       padding-bottom: 0;
       font-size: 15px;
-    }
-
-    &--border {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -14px;
-        height: 80px;
-        width: 1px;
-        background-color: @white-g;
-      }
     }
   }
 }
