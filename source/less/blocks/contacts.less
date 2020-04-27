@@ -101,6 +101,18 @@
 
   color: @greyish-brown;
 
+  &:hover {
+    color: @footericon;
+  }
+
+  &:active {
+    color: @linkdown;
+  }
+
+  &:active::after {
+    background-color: @linkdown;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -108,7 +120,7 @@
     left: 31px;
     width: 177px;
     height: 1px;
-    background-color: @green;
+    background-color: @footericon;
 
     @media (min-width: @tablet-width) {
       top: 29px;
