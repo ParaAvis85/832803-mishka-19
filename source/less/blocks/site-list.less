@@ -38,7 +38,11 @@
 
     &--border {
       position: relative;
+    }
+  }
 
+  @media (min-width: @desktop-width) {
+    &--border {
       &::after {
         content: "";
         position: absolute;
@@ -49,9 +53,7 @@
         background-color: @white-g;
       }
     }
-  }
 
-  @media (min-width: @desktop-width) {
     &--hide {
       padding-right: 9px;
     }
