@@ -352,11 +352,11 @@
     padding-right: 30px;
     cursor: pointer;
 
-    &:hover::after {
+    &:hover::before {
       border-color: @green;
     }
 
-    &:active::after {
+    &:active::before {
       opacity: 0.3;
       border-color: @greyish-brown;
     }
@@ -369,10 +369,10 @@
       padding-left: 115px;
     }
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
-      top: -10px;
+      top: -8px;
       left: 0;
       width: 40px;
       height: 40px;
@@ -390,6 +390,31 @@
         left: 34px;
       }
     }
+
+    /* отрисовка радио баттонов в выключеном состоянии*/
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 12px;
+      display: none;
+      width: 16px;
+      height: 16px;
+      background-color: @green;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        top: 0;
+        left: 42px;
+        width: 21px;
+        height: 21px;
+      }
+
+      @media (min-width: @desktop-width) {
+        left: 50px;
+      }
+    }
   }
 
   &--checkbox {
@@ -398,11 +423,11 @@
     padding-right: 30px;
     cursor: pointer;
 
-    &:hover::after {
+    &:hover::before {
       border-color: @green;
     }
 
-    &:active::after {
+    &:active::before {
       opacity: 0.3;
       border-color: @greyish-brown;
     }
@@ -415,7 +440,7 @@
       padding-left: 116px;
     }
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       top: -13px;
@@ -423,6 +448,31 @@
       width: 40px;
       height: 40px;
       border: 2px solid  @greyish-brown;
+
+      @media (min-width: @tablet-width) {
+        top: -15px;
+        left: 28px;
+        width: 52px;
+        height: 52px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -16px;
+        left: 36px;
+      }
+    }
+    /* отрисовка чекбоксов в выкл состоянии не работает в связке*/
+    &::after {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 0;
+      display: none;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/icon-tick.svg");
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (min-width: @tablet-width) {
         top: -15px;
@@ -482,8 +532,15 @@
   border: none;
   padding-top: 5px;
   padding-bottom: 15px;
+  /*  начало не рабочей связки радио и чекбокс*/
+  &--radio:checked + .form__label--radio::after {
+    display: block;
+  }
 
-
+  &--checkbox:checked + .form__label--checkbox::after {
+    display: block;
+  }
+  /*  конец не рабочей связки*/
   &--text {
     &:hover {
       border-color: @green;
