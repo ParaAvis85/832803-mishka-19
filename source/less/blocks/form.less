@@ -350,6 +350,16 @@
     position: relative;
     padding-left: 63px;
     padding-right: 30px;
+    cursor: pointer;
+
+    &:hover::after {
+      border-color: @green;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+      border-color: @greyish-brown;
+    }
 
     @media (min-width: @tablet-width) {
       padding-left: 107px;
@@ -386,6 +396,16 @@
     position: relative;
     padding-left: 62px;
     padding-right: 30px;
+    cursor: pointer;
+
+    &:hover::after {
+      border-color: @green;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+      border-color: @greyish-brown;
+    }
 
     @media (min-width: @tablet-width) {
       padding-left: 107px;
@@ -463,28 +483,48 @@
   padding-top: 5px;
   padding-bottom: 15px;
 
-  @media (min-width: @tablet-width) {
-    &--text {
+
+  &--text {
+    &:hover {
+      border-color: @green;
+    }
+
+    &::after {
+      border-color: @green;
+    }
+
+    @media (min-width: @tablet-width) {
       border-bottom: 2px solid @black;
       width: 375px;
-
-      @media (min-width: @desktop-width) {
-        width: 574px;
-      }
     }
 
-    &--name {
-      width: 428px;
-
-      @media (min-width: @desktop-width) {
-        width: 626px;
-      }
+    @media (min-width: @desktop-width) {
+      width: 574px;
     }
   }
+
+  &--name {
+    @media (min-width: @tablet-width) {
+      width: 428px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 626px;
+    }
+  }
+
 
   &--tel {
     padding-right: 30px;
     background-color: transparent;
+
+    &:hover {
+      border-color: @green;
+    }
+
+    &::after {
+      border-color: @green;
+    }
 
     @media (min-width: @tablet-width) {
       width: 500px;
@@ -501,6 +541,14 @@
     background-color: transparent;
     padding-right: 30px;
 
+    &:hover {
+      border-color: @green;
+    }
+
+    &::after {
+      border-color: @green;
+    }
+
     @media (min-width: @tablet-width) {
       width: 500px;
       border-bottom: 2px solid @black;
@@ -516,6 +564,14 @@
     border: 2px solid @greyish-brown;
     padding-top: 15px;
     padding-bottom: 27px;
+
+    &:hover {
+      border-color: @green;
+    }
+
+    &::after {
+      border-color: @green;
+    }
 
     &::placeholder {
       padding-right: 14px;
