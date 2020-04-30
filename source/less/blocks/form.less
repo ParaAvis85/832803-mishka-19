@@ -537,8 +537,16 @@
       border-color: @green;
     }
 
-    &::after {
+    &:hover + svg {
+      fill: @green;
+    }
+
+    &:focus {
       border-color: @green;
+    }
+
+    &:focus + svg {
+      fill: @green;
     }
 
     @media (min-width: @tablet-width) {
@@ -560,8 +568,16 @@
       border-color: @green;
     }
 
-    &::after {
+    &:hover + svg {
+      fill: @green;
+    }
+
+    &:focus {
       border-color: @green;
+    }
+
+    &:focus + svg {
+      fill: @green;
     }
 
     @media (min-width: @tablet-width) {
@@ -637,15 +653,13 @@
   &--tel {
     position: relative;
     margin-bottom: 32px;
-
-    &:hover {
-      fill: @green;
-    }
+    fill: @black-20;
   }
 
   &--email {
     position: relative;
     margin-bottom: 32px;
+    fill: @black-20;
 
     &:hover {
       fill: @green;
