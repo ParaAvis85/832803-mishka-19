@@ -113,15 +113,15 @@
         <legend class="form__legend form__legend--radio">Тип</legend>
         <ul class="form__list">
           <li class="form__item form__item--radio">
-            <label class="form__label form__label--radio">
-              <input class="form__control form__control--radio visually-hidden" type="radio" name="type" value="accessories" checked>
+            <input class="form__control form__control--radio visually-hidden" type="radio" id="interior" name="type" value="accessories" checked>
+            <label class="form__label form__label--radio" for="interior">
               Аксессуар для
               интерьера
             </label>
           </li>
           <li class="form__item form__item--radio">
-            <label class="form__label form__label--radio">
-              <input class="form__control form__control--radio visually-hidden" type="radio" name="type" value="toys">
+            <input class="form__control form__control--radio visually-hidden" type="radio" id="toy" name="type" value="toys">
+            <label class="form__label form__label--radio" for="toy">
               Детская игрушка
             </label>
           </li>
@@ -135,40 +135,40 @@
         <legend class="form__legend form__legend--checkbox">Цвет</legend>
         <ul class="form__list form__list--colors">
           <li class="form__item form__item--colors">
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="white" name="color" value="white" checked>
             <label class="form__label form__label--checkbox" for="white">
               Белый
             </label>
-            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="white" name="color" value="white" checked>
           </li>
           <li class="form__item form__item--colors">
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="grey" name="color" value="grey" checked>
             <label class="form__label form__label--checkbox" for="grey">
               Серый
             </label>
-            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="grey" name="color" value="grey" checked>
           </li>
           <li class="form__item form__item--colors">
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="tiffany" name="color" value="tiffany">
             <label class="form__label form__label--checkbox" for="tiffany">
               «Тиффани»
             </label>
-            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="tiffany" name="color" value="tiffany">
           </li>
           <li class="form__item form__item--colors">
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="black" name="color" value="black">
             <label class="form__label form__label--checkbox" for="black">
               Черный
             </label>
-            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="black" name="color" value="black">
           </li>
           <li class="form__item form__item--colors">
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="rose" name="color" value="rose">
             <label class="form__label form__label--checkbox" for="rose">
               Розовый
             </label>
-            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="rose" name="color" value="rose">
           </li>
           <li class="form__item form__item--colors">
+            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="orange" name="color" value="orange">
             <label class="form__label form__label--checkbox" for="orange">
               Оранжевый
             </label>
-            <input class="form__control form__control--checkbox visually-hidden" type="checkbox" id="orange" name="color" value="orange">
           </li>
         </ul>
       </fieldset>
