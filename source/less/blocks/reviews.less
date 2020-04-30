@@ -5,11 +5,19 @@
     min-height: 526px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 350 457;
+    background-size: 350px 457px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     background-position: 50px 5px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   &::after {
@@ -161,6 +169,14 @@
   background-color: @white;
   margin: 0;
   padding: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     background-color: transparent;

@@ -266,28 +266,6 @@
         background-color: @leftgreen;
       }
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 34px;
-      right: 6px;
-      width: 26px;
-      height: 26px;
-      background-image: url("../img/icon-phone.svg");
-      background-position: 0 0;
-      background-repeat: no-repeat;
-
-      @media (min-width: @tablet-width) {
-        right: 0;
-        left: 617px;
-        top: 0;
-
-        @media (min-width: @desktop-width) {
-          left: 842px;
-        }
-      }
-    }
   }
 
   &--email {
@@ -321,35 +299,22 @@
         background-color: @leftgreen;
       }
     }
-
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 34px;
-      right: 3px;
-      width: 32px;
-      height: 26px;
-      background-image: url("../img/icon-mail.svg");
-      background-position: 0 0;
-      background-repeat: no-repeat;
-
-      @media (min-width: @tablet-width) {
-        right: 0;
-        left: 615px;
-        top: 0;
-      }
-
-      @media (min-width: @desktop-width) {
-        left: 838px;
-      }
-    }
   }
 
   &--radio {
     position: relative;
     padding-left: 63px;
     padding-right: 30px;
+    cursor: pointer;
+
+    &:hover::before {
+      border-color: @green;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+      border-color: @greyish-brown;
+    }
 
     @media (min-width: @tablet-width) {
       padding-left: 107px;
@@ -359,10 +324,10 @@
       padding-left: 115px;
     }
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
-      top: -10px;
+      top: -8px;
       left: 0;
       width: 40px;
       height: 40px;
@@ -380,12 +345,47 @@
         left: 34px;
       }
     }
+
+    /* отрисовка радио баттонов в выключеном состоянии*/
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 12px;
+      display: none;
+      width: 16px;
+      height: 16px;
+      background-color: @green;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        top: 0;
+        left: 42px;
+        width: 21px;
+        height: 21px;
+      }
+
+      @media (min-width: @desktop-width) {
+        left: 50px;
+      }
+    }
   }
 
   &--checkbox {
     position: relative;
     padding-left: 62px;
     padding-right: 30px;
+    cursor: pointer;
+
+    &:hover::before {
+      border-color: @green;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+      border-color: @greyish-brown;
+    }
 
     @media (min-width: @tablet-width) {
       padding-left: 107px;
@@ -395,7 +395,7 @@
       padding-left: 116px;
     }
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       top: -13px;
@@ -403,6 +403,31 @@
       width: 40px;
       height: 40px;
       border: 2px solid  @greyish-brown;
+
+      @media (min-width: @tablet-width) {
+        top: -15px;
+        left: 28px;
+        width: 52px;
+        height: 52px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -16px;
+        left: 36px;
+      }
+    }
+    /* отрисовка чекбоксов в выкл состоянии не работает в связке*/
+    &::after {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 0;
+      display: none;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/icon-tick.svg");
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (min-width: @tablet-width) {
         top: -15px;
@@ -459,32 +484,71 @@
   color: @greyish-brown;
 
   width: 260px;
-  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid @black;
   padding-top: 5px;
   padding-bottom: 15px;
+  padding-left: 18px;
+  /*  начало не рабочей связки радио и чекбокс*/
+  &--radio:checked + .form__label--radio::after {
+    display: block;
+  }
 
-  @media (min-width: @tablet-width) {
-    &--text {
+  &--checkbox:checked + .form__label--checkbox::after {
+    display: block;
+  }
+  /*  конец не рабочей связки*/
+  &--text {
+    &:hover {
+      border-color: @green;
+    }
+
+    &::after {
+      border-color: @green;
+    }
+
+    @media (min-width: @tablet-width) {
       border-bottom: 2px solid @black;
       width: 375px;
-
-      @media (min-width: @desktop-width) {
-        width: 574px;
-      }
     }
 
-    &--name {
-      width: 428px;
-
-      @media (min-width: @desktop-width) {
-        width: 626px;
-      }
+    @media (min-width: @desktop-width) {
+      width: 574px;
     }
   }
+
+  &--name {
+    @media (min-width: @tablet-width) {
+      width: 428px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 626px;
+    }
+  }
+
 
   &--tel {
     padding-right: 30px;
     background-color: transparent;
+
+    &:hover {
+      border-color: @green;
+    }
+
+    &:hover + svg {
+      fill: @green;
+    }
+
+    &:focus {
+      border-color: @green;
+    }
+
+    &:focus + svg {
+      fill: @green;
+    }
 
     @media (min-width: @tablet-width) {
       width: 500px;
@@ -500,6 +564,22 @@
   &--email {
     background-color: transparent;
     padding-right: 30px;
+
+    &:hover {
+      border-color: @green;
+    }
+
+    &:hover + svg {
+      fill: @green;
+    }
+
+    &:focus {
+      border-color: @green;
+    }
+
+    &:focus + svg {
+      fill: @green;
+    }
 
     @media (min-width: @tablet-width) {
       width: 500px;
@@ -517,19 +597,18 @@
     padding-top: 15px;
     padding-bottom: 27px;
 
-    &::placeholder {
-      padding-right: 14px;
-      padding-left: 14px;
+    &:hover {
+      border-color: @green;
+    }
+
+    &::after {
+      border-color: @green;
     }
 
     @media (min-width: @tablet-width) {
       width: 500px;
       margin-top: 50px;
       margin-left: 168px;
-
-      &::placeholder {
-        margin-left: 0;
-      }
     }
 
     @media (min-width: @desktop-width) {
@@ -546,7 +625,6 @@
 
     @media (min-width: @tablet-width) {
       font-size: 19px;
-      padding-left: 18px;
     }
   }
 
@@ -556,7 +634,6 @@
 }
 
 .form__wrapper {
-  border-bottom: 2px solid @black;
   display: flex;
   flex-direction: column;
 
@@ -565,11 +642,19 @@
   }
 
   &--tel {
+    position: relative;
     margin-bottom: 32px;
+    fill: @black-20;
   }
 
   &--email {
+    position: relative;
     margin-bottom: 32px;
+    fill: @black-20;
+
+    &:hover {
+      fill: @green;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -594,6 +679,36 @@
       border: none;
       margin-bottom: 50px;
     }
+  }
+}
+
+.form__tel-svg {
+  position: absolute;
+  top: 35px;
+  right: 8px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    right: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 183px;
+  }
+}
+
+.form__email-svg {
+  position: absolute;
+  top: 35px;
+  right: 4px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    right: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 179px;
   }
 }
 

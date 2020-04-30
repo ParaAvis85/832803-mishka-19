@@ -50,10 +50,28 @@
 
     &--left {
       background-color: @leftgreen;
+
+      &:active {
+        background-color: @leftgreenhover;
+      }
     }
 
     &--right {
       background-color: @rightgreen;
+
+      &:active {
+        background-color: @rightgreenhover;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--left {
+      background-color: @leftgreenhover;
+    }
+
+    &--right {
+      background-color: @rightgreenhover;
     }
   }
 }
@@ -67,12 +85,27 @@
   color: @white;
 
   &--left {
-    background-color: @leftgreen;
     width: 320px;
+    fill: @leftgreenbtn;
+
+    &:hover {
+      fill: @leftgreenbtnhover;
+    }
+
+    &:active {
+      color: @white-30;
+      fill: @leftgreenbtnactive;
+    }
 
     @media (min-width: @tablet-width) {
+      background-color: @leftgreen;
       width: 334px;
       min-height: 119px;
+
+      &:hover {
+        margin-top: -5px;
+        background-color: @leftgreenhover;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -81,12 +114,27 @@
   }
 
   &--right {
-    background-color: @rightgreen;
     width: 320px;
+    fill: @rightgreenbtn;
+
+    &:hover {
+      fill: @rightgreenbtnhover;
+    }
+
+    &:active {
+      color: @white-30;
+      fill: @rightgreenbtnactive;
+    }
 
     @media (min-width: @tablet-width) {
+      background-color: @rightgreen;
       width: 334px;
       min-height: 119px;
+
+      &:hover {
+        margin-top: -5px;
+        background-color: @rightgreenhover;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -138,15 +186,5 @@
   @media (min-width: @tablet-width) {
     padding-top: 30px;
     padding-right: 9px;
-  }
-}
-
-.category__list-image {
-  &--interior {
-    fill: @leftgreenbtn;
-  }
-
-  &--toy {
-    fill: @rightgreenbtn;
   }
 }

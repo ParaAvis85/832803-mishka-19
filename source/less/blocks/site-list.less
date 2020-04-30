@@ -31,9 +31,29 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+
+    &--right {
+      box-shadow: inset 1px 0 0 0 #e5e5e5;
+    }
+
+    &--border {
+      position: relative;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    &--border {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -14px;
+        height: 80px;
+        width: 1px;
+        background-color: @white-g;
+      }
+    }
+
     &--hide {
       padding-right: 9px;
     }
@@ -66,6 +86,21 @@
   padding-top: 26px;
   padding-bottom: 28px;
   padding-left: 75px;
+  fill: @icon-20;
+
+  &:hover {
+    color: @black-60;
+    fill: @leftgreen;
+  }
+
+  &:active {
+    color: @black-30;
+    fill: @leftgreen-30;
+  }
+
+  &--non-clickable {
+    pointer-events: none;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 21px;
@@ -75,38 +110,10 @@
 
   &--search {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 31px;
-      left: 32px;
-      width: 22px;
-      height: 22px;
-      background-image: url("../img/icon-search.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
   }
 
   &--cart {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 30px;
-      left: 31px;
-      width: 23px;
-      height: 23px;
-      background-image: url("../img/icon-cart.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-
-      @media (min-width: @tablet-width) {
-        top: 25px;
-      }
-    }
   }
 
   @media (min-width: @tablet-width) {
@@ -123,13 +130,6 @@
 
     &--search {
       font-size: 0;
-      border-left: 1px solid @white-g;
-      border-right: 1px solid @white-g;
-
-      &::before {
-        top: 27px;
-        left: 32px;
-      }
     }
   }
 
@@ -148,20 +148,26 @@
       padding-bottom: 0;
       font-size: 15px;
     }
+  }
+}
 
-    &--border {
-      position: relative;
+.site-list__loupe {
+  position: absolute;
+  top: 31px;
+  left: 32px;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -14px;
-        height: 80px;
-        width: 1px;
-        background-color: @white-g;
-      }
-    }
+  @media (min-width: @tablet-width) {
+    top: 26px;
+  }
+}
+
+.site-list__cart {
+  position: absolute;
+  top: 31px;
+  left: 32px;
+
+  @media (min-width: @tablet-width) {
+    top: 26px;
   }
 }
 

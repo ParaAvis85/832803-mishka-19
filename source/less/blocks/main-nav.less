@@ -31,6 +31,20 @@
   }
 }
 
+.main-nav__logo {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--non-clickable {
+    pointer-events: none;
+  }
+}
+
 .main-nav__list-wrapper {
   display: flex;
   flex-direction: column;
@@ -71,6 +85,14 @@
 }
 
 .main-nav__toggle {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (max-width: @only-mobile-width) {
     position: absolute;
     top: 29px;
