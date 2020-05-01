@@ -371,24 +371,29 @@
     </div>
   </footer>
 
+  <div class="form-cart__wrapper">
     <form class="form-cart">
       <h2 class="form-cart__title">Добавить в корзину</h2>
+      <fieldset class="form-cart__fieldset">
       <legend class="form-cart__legend">Выберите размер:</legend>
       <ul class="form-cart__list">
         <li class="form-cart__list-item">
-          <input type="checkbox">
-          <label class="form-cart__label">S</label>
+          <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-s" name="size" checked>
+          <label class="form-cart__label form-cart__label--checkbox" for="size-s">S</label>
         </li>
         <li class="form-cart__list-item">
-          <input type="checkbox">
-          <label class="form-cart__label">M</label>
+          <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-m" name="size">
+          <label class="form-cart__label form-cart__label--checkbox" for="size-m">M</label>
         </li>
         <li class="form-cart__list-item">
-          <input type="checkbox">
-          <label class="form-cart__label">L</label>
+          <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-l" name="size">
+          <label class="form-cart__label form-cart__label--checkbox" for="size-l">L</label>
         </li>
       </ul>
+    </fieldset>
+    <button class="form-cart__button form-cart__button--green">Добавить</button>
     </form>
+  </div>
 </body>
 
 </html>
