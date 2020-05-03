@@ -42,7 +42,7 @@
     @media (min-width: @tablet-width) {
       padding-top: 65px;
       padding-bottom: 11px;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
   }
 
@@ -50,7 +50,7 @@
     margin-bottom: 8px;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 16px;
+      margin-bottom: 26px;
     }
   }
 
@@ -61,7 +61,7 @@
   }
 
   &--textarea {
-    margin-bottom: 11px;
+    margin-bottom: 13px;
   }
 
   @media (min-width: @tablet-width) {
@@ -151,7 +151,7 @@
 
     @media (min-width: @tablet-width) {
       position: absolute;
-      top: 7px;
+      top: 16px;
       left: 0;
     }
 
@@ -224,12 +224,11 @@
   }
 
   &--text {
-    padding-bottom: 9px;
+    margin-bottom: 9px;
 
     @media (min-width: @tablet-width) {
       padding-right: 24px;
       padding-left: 27px;
-      padding-bottom: 29px;
     }
 
     @media (min-width: @desktop-width) {
@@ -247,12 +246,14 @@
     @media (min-width: @tablet-width) {
       font-size: 17px;
       line-height: 16px;
-      padding-top: 7px;
+      padding-top: 16px;
       padding-bottom: 0;
+      margin-right: 135px;
     }
 
     @media (min-width: @desktop-width) {
       padding-left: 63px;
+      margin-right: 79px;
     }
 
     @media (max-width: @only-mobile-width) {
@@ -279,13 +280,14 @@
     @media (min-width: @tablet-width) {
       font-size: 17px;
       line-height: 16px;
-      padding-top: 5px;
+      padding-top: 16px;
       padding-bottom: 0;
+      margin-right: 110px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 7px;
       padding-left: 61px;
+      margin-right: 55px;
     }
 
     @media (max-width: @only-mobile-width) {
@@ -488,9 +490,13 @@
   border-left: none;
   border-right: none;
   border-bottom: 2px solid @black;
-  padding-top: 5px;
-  padding-bottom: 15px;
-  padding-left: 18px;
+
+  @media (max-width: @only-mobile-width) {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  // padding-left: 18px;
   /*  начало не рабочей связки радио и чекбокс*/
   &--radio:checked + .form__label--radio::after {
     display: block;
@@ -512,6 +518,9 @@
     @media (min-width: @tablet-width) {
       border-bottom: 2px solid @black;
       width: 375px;
+      height: 51px;
+      margin-bottom: 25px;
+      padding-left: 18px;
     }
 
     @media (min-width: @desktop-width) {
@@ -522,6 +531,7 @@
   &--name {
     @media (min-width: @tablet-width) {
       width: 428px;
+      height: 51px;
     }
 
     @media (min-width: @desktop-width) {
@@ -553,6 +563,9 @@
     @media (min-width: @tablet-width) {
       width: 500px;
       border-bottom: 2px solid @black;
+      height: 51px;
+      padding-left: 15px;
+      padding-right: 60px;
     }
 
     @media (min-width: @desktop-width) {
@@ -584,6 +597,9 @@
     @media (min-width: @tablet-width) {
       width: 500px;
       border-bottom: 2px solid @black;
+      height: 51px;
+      padding-left: 15px;
+      padding-right: 60px;
     }
 
     @media (min-width: @desktop-width) {
@@ -596,6 +612,7 @@
     border: 2px solid @greyish-brown;
     padding-top: 15px;
     padding-bottom: 27px;
+    padding-left: 15px;
 
     &:hover {
       border-color: @green;
@@ -609,6 +626,8 @@
       width: 500px;
       margin-top: 50px;
       margin-left: 168px;
+      min-height: 142px;
+      padding-bottom: 0;
     }
 
     @media (min-width: @desktop-width) {
@@ -637,8 +656,10 @@
   display: flex;
   flex-direction: column;
 
-  &--name {
-    margin-bottom: 24px;
+  @media (max-width: @only-mobile-width) {
+    &--name {
+      margin-bottom: 24px;
+    }
   }
 
   &--tel {
@@ -665,8 +686,8 @@
       flex-direction: row;
       justify-content: space-between;
       border: none;
-      margin-top: 61px;
-      margin-bottom: 35px;
+      margin-top: 50px;
+      margin-bottom: 26px;
     }
 
     &--email {
@@ -684,7 +705,7 @@
   right: 8px;
 
   @media (min-width: @tablet-width) {
-    top: 0;
+    top: 9px;
     right: 26px;
   }
 
@@ -699,7 +720,7 @@
   right: 4px;
 
   @media (min-width: @tablet-width) {
-    top: 0;
+    top: 9px;
     right: 23px;
   }
 
