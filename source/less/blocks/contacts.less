@@ -220,10 +220,24 @@
 .contacts__map-image {
   width: 320px;
   height: 457px;
+  z-index: 0;
+
+  &--iframe {
+    position: absolute;
+    width: 320px;
+    height: 457px;
+    border: none;
+    z-index: 3;
+  }
 
   @media (min-width: @tablet-width) {
     width: 768px;
     height: 457px;
+
+    &--iframe {
+      width: 768px;
+      height: 457px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -231,6 +245,12 @@
     top: 100px;
     width: 525px;
     height: 457px;
+
+    &--iframe {
+      top: 100px;
+      width: 525px;
+      height: 457px;
+    }
   }
 }
 
