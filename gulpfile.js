@@ -16,6 +16,7 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var jsmin = require('gulp-jsmin');
 var del = require("del");
 
 
@@ -80,6 +81,13 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("build"));
   });
 
+  gulp.task("jsmin", async function () {
+    gulp.src("source/js/**/*.js")
+      .pipe(jsmin())
+      .pipe(rename({suffix: ".min"}))
+      .pipe(gulp.dest("build/js"))
+      .pipe(server.stream());
+});
 
 gulp.task("clean", function () {
   return del("build");
@@ -90,7 +98,8 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "jsmin"
 ));
 
 
