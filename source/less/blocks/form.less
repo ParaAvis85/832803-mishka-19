@@ -25,6 +25,12 @@
   }
 }
 
+.form__fieldset-bgcolor {
+  @media (min-width: @tablet-width) {
+    background-color: @white-g;
+  }
+}
+
 .form__fieldset {
   border: none;
   padding: 0;
@@ -71,10 +77,6 @@
     &--textarea {
       padding-left: 0;
       position: relative;
-    }
-
-    &--bgcolor {
-      background-color: @white-g;
     }
 
     &--tool {
