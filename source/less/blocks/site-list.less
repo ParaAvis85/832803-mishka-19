@@ -1,4 +1,18 @@
 .site-list {
+  @media (max-width: @only-mobile-width) {
+    &--open {
+      display: block;
+    }
+
+    &--close {
+      display: none;
+    }
+
+    &--nojs {
+      display: block;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     &--left {
       display: flex;
