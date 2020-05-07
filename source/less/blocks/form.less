@@ -498,7 +498,13 @@
     padding-bottom: 15px;
   }
 
-  // padding-left: 18px;
+  &--radio:focus + .form__label--radio::before {
+    outline: 2px solid @green;
+  }
+
+  &--checkbox:focus + .form__label--checkbox::before {
+    outline: 2px solid @green;
+  }
   /*  начало не рабочей связки радио и чекбокс*/
   &--radio:checked + .form__label--radio::after {
     display: block;
