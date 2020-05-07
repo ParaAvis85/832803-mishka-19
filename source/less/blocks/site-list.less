@@ -1,13 +1,14 @@
 .site-list {
   @media (max-width: @only-mobile-width) {
+    /* при наличии JS релизации меню открывается */
     &--open {
       display: block;
     }
-
+    /* при наличии JS реализиции меню зарывается */
     &--close {
       display: none;
     }
-
+    /* при отсутсвии JS меню всегда отрыто */
     &--nojs {
       display: block;
     }
