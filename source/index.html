@@ -126,7 +126,7 @@
                 интерьера
               </span>
               <span class="category__list-wrapper-image category__list-wrapper-image--left">
-                <svg class="category__list-image--interior" width="40px" height="62px">
+                <svg class="category__list-image category__list-image--interior" width="40px" height="62px">
                   <use xlink:href="#icon-interior"></use>
                 </svg>
               </span>
@@ -141,7 +141,7 @@
                 игрушки
               </span>
               <span class="category__list-wrapper-image">
-                <svg class="category__list-image--toy" width="60px" height="60px">
+                <svg class="category__list-image category__list-image--toy" width="60px" height="60px">
                   <use xlink:href="#icon-toy"></use>
                 </svg>
               </span>
@@ -164,16 +164,16 @@
         </p>
         <table class="product__description-table">
           <tr>
-            <td class="product__description-table--field">Цвет:</td>
-            <td class="product__description-table--value">«Тиффани»/серый</td>
+            <td class="product__description-table-data product__description-table-data--field">Цвет:</td>
+            <td class="product__description-table-data product__description-table-data--value">«Тиффани»/серый</td>
           </tr>
           <tr>
-            <td class="product__description-table--field">Диаметр:</td>
-            <td class="product__description-table--value">25 см</td>
+            <td class="product__description-table-data product__description-table-data--field">Диаметр:</td>
+            <td class="product__description-table-data product__description-table-data--value">25 см</td>
           </tr>
           <tr>
-            <td class="product__description-table--field">Высота:</td>
-            <td class="product__description-table--value">15 см</td>
+            <td class="product__description-table-data product__description-table-data--field">Высота:</td>
+            <td class="product__description-table-data product__description-table-data--value">15 см</td>
           </tr>
         </table>
       </div>
@@ -263,7 +263,7 @@
       </div>
       </div>
       <div class="contacts__map-image-wrapper">
-        <iframe class="contacts__map-image--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.32085871617598!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1588682043641!5m2!1sru!2sru" width="320" height="457"></iframe>
+        <iframe class="contacts__map-image contacts__map-image--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.32085871617598!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1588682043641!5m2!1sru!2sru" width="320" height="457"></iframe>
         <picture>
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
@@ -321,15 +321,15 @@
     <div class="copyright page-footer__copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <b class="copyright__text">Разработано</b>
-        <svg class="copyright__link--image" width="27px" height="34px">
+        <svg class="copyright__link-image" width="27px" height="34px">
           <use xlink:href="#icon-htmlacademy"></use>
         </svg>
       </a>
     </div>
   </footer>
 
-  <div class="form-cart__popup-overlay form-cart__popup-overlay--open form-cart__popup-overlay--close form-cart__popup-overlay--nojs">
-    <div class="form-cart__wrapper form-cart__wrapper--open form-cart__wrapper--close form-cart__wrapper--nojs">
+  <div class="popup-overlay popup-overlay--open popup-overlay--close popup-overlay--nojs">
+    <div class="popup-overlay__wrapper popup-overlay__wrapper--open popup-overlay__wrapper--close popup-overlay__wrapper--nojs">
       <form class="form-cart">
         <h2 class="form-cart__title">Добавить в корзину</h2>
         <fieldset class="form-cart__fieldset">

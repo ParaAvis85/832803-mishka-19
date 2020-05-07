@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2">
     <!-- Pixel Glass -->
@@ -299,31 +299,31 @@
     </div>
   </footer>
 
-    <div class="form-cart__popup-overlay form-cart__popup-overlay--open form-cart__popup-overlay--close form-cart__popup-overlay--nojs">
-      <div class="form-cart__wrapper form-cart__wrapper--open form-cart__wrapper--close form-cart__wrapper--nojs">
-        <form class="form-cart">
-          <h2 class="form-cart__title">Добавить в корзину</h2>
-          <fieldset class="form-cart__fieldset">
-            <legend class="form-cart__legend">Выберите размер:</legend>
-            <ul class="form-cart__list">
-              <li class="form-cart__list-item">
-                <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-s" name="size" checked>
-                <label class="form-cart__label form-cart__label--checkbox" for="size-s">S</label>
-              </li>
-              <li class="form-cart__list-item">
-                <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-m" name="size">
-                <label class="form-cart__label form-cart__label--checkbox" for="size-m">M</label>
-              </li>
-              <li class="form-cart__list-item">
-                <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-l" name="size">
-                <label class="form-cart__label form-cart__label--checkbox" for="size-l">L</label>
-              </li>
-            </ul>
-          </fieldset>
-        <button class="form-cart__button form-cart__button--green" type="button">Добавить</button>
-      </form>
-    </div>
+  <div class="popup-overlay popup-overlay--open popup-overlay--close popup-overlay--nojs">
+    <div class="popup-overlay__wrapper popup-overlay__wrapper--open popup-overlay__wrapper--close popup-overlay__wrapper--nojs">
+      <form class="form-cart">
+        <h2 class="form-cart__title">Добавить в корзину</h2>
+        <fieldset class="form-cart__fieldset">
+          <legend class="form-cart__legend">Выберите размер:</legend>
+          <ul class="form-cart__list">
+            <li class="form-cart__list-item">
+              <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-s" name="size" checked>
+              <label class="form-cart__label form-cart__label--checkbox" for="size-s">S</label>
+            </li>
+            <li class="form-cart__list-item">
+              <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-m" name="size">
+              <label class="form-cart__label form-cart__label--checkbox" for="size-m">M</label>
+            </li>
+            <li class="form-cart__list-item">
+              <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-l" name="size">
+              <label class="form-cart__label form-cart__label--checkbox" for="size-l">L</label>
+            </li>
+          </ul>
+        </fieldset>
+      <button class="form-cart__button form-cart__button--green" type="button">Добавить</button>
+    </form>
   </div>
+</div>
 </body>
 
 </html>
