@@ -84,6 +84,28 @@
   }
 }
 
+
+.main-nav__point {
+  @media (max-width: @only-mobile-width) {
+    &--hide {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    color: @greyish-brown;
+    margin: 0;
+    padding-top: 17px;
+    padding-bottom: 0;
+    padding-right: 49px;
+    z-index: 1;
+  }
+}
+
 .main-nav__toggle {
   &:hover {
     opacity: 0.6;
@@ -101,6 +123,10 @@
     padding: 0;
     background-color: transparent;
     border: none;
+
+    &--nojs {
+      display: none;
+    }
   }
 
   @media (min-width: @tablet-width) {

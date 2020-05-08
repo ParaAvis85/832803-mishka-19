@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2">
     <!-- Pixel Glass -->
@@ -51,7 +51,7 @@
 
       <div class="main-nav__list-wrapper">
         <div class="main-nav__logo-wrapper">
-          <a class="main-nav__logo" href="index.html">
+          <a class="main-nav__logo" href="index.html" aria-label="Логотип каталога страницы Мишка">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -59,32 +59,32 @@
             </picture>
           </a>
 
-          <button class="main-nav__toggle" type="button">
+          <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Кнопка закрыть мобильное меню">
             <svg width="20px" height="20px">
               <use xlink:href="#icon-menu-close"></use>
             </svg>
           </button>
         </div>
 
-        <ul class="main-nav__list site-list site-list--left">
+        <ul class="main-nav__list site-list site-list--left site-list--close site-list--open site-list--nojs">
           <li class="site-list__item site-list__item--left site-list__item--border">
-            <a class="site-list__link site-list__link--left site-list__link--non-clickable">Каталог товаров</a>
+            <a class="site-list__link site-list__link--left site-list__link--non-clickable" aria-label="Кнопка каталог товаров">Каталог товаров</a>
           </li>
           <li class="site-list__item site-list__item--left">
-            <a class="site-list__link site-list__link--left" href="form.html">Вязание на заказ</a>
+            <a class="site-list__link site-list__link--left" href="form.html" aria-label="Кнопка вязание на заказ">Вязание на заказ</a>
           </li>
         </ul>
 
-        <ul class="main-nav__list site-list site-list--right">
+        <ul class="main-nav__list site-list site-list--right site-list--close site-list--open site-list--nojs">
           <li class="site-list__item site-list__item--right">
-            <a class="site-list__link site-list__link--search" href="#">
+            <a class="site-list__link site-list__link--search" href="#" aria-label="Кнопка поиск по сайту">
               <svg class="site-list__loupe" width="17px" height="17px">
                 <use xlink:href="#icon-search"></use>
               </svg>
               Поиск по сайту</a>
           </li>
           <li class="site-list__item site-list__item--right">
-            <a class="site-list__link site-list__link--cart" href="#">
+            <a class="site-list__link site-list__link--cart" href="#" aria-label="Кнопка корзина заказа">
               <svg class="site-list__cart" width="20px" height="19px">
                 <use xlink:href="#icon-cart"></use>
               </svg>
@@ -94,13 +94,13 @@
 
         <ul class="main-nav__list main-nav__list--hide site-list">
           <li class="site-list__item site-list__item--hide">
-            <a class="site-list__link site-list__link--hide" href="#">Новые поступления</a>
+            <a class="site-list__link site-list__link--hide" href="#" aria-label="Кнопка страницы новые поступления">Новые поступления</a>
           </li>
           <li class="site-list__item site-list__item--hide">
-            <a class="site-list__link site-list__link--hide" href="#">Распродажа</a>
+            <a class="site-list__link site-list__link--hide" href="#" aria-label="Кнопка страницы распродажа">Распродажа</a>
           </li>
         </ul>
-        <p class="site-list__point site-list__point--hide">Бесплатная доставка по России</p>
+        <p class="main-nav__point main-nav__point--hide">Бесплатная доставка по России</p>
       </div>
     </nav>
   </header>
@@ -112,7 +112,7 @@
     <ul class="catalog-card container">
       <li class="catalog-card__item catalog-card__item--top catalog-item">
         <div class="catalog-item-top">
-          <a class="catalog-item__link-image" href="#">
+          <a class="catalog-item__link-image" href="#" aria-label="карточка выбора товара">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
@@ -127,7 +127,7 @@
         </div>
         <div class="catalog-item__wrapper">
           <div class="catalog-item__wrapper-middle">
-            <a class="catalog-item__link" href="#">
+            <a class="catalog-item__link" href="#" aria-label="заголовок выбора товара">
               <h2 class="catalog-item__short-title">
                 Зайчик-попрыгайчик
               </h2>
@@ -137,7 +137,7 @@
 
           <div class="catalog-item__wrapper-bottom">
             <p class="catalog-item__price">1 200 руб.</p>
-            <a class="catalog-item__button" href="#">
+            <a class="catalog-item__button" href="form.html" aria-label="кнопка заказа товара">
               <svg class="catalog-item__button-cart" width="20px" height="19px">
                 <use xlink:href="#icon-cart"></use>
               </svg>
@@ -148,7 +148,7 @@
 
       <li class="catalog-card__item catalog-item">
         <div class="catalog-item-top">
-          <a class="catalog-item__link-image" href="#">
+          <a class="catalog-item__link-image" href="#" aria-label="карточка выбора товара">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
@@ -163,7 +163,7 @@
         </div>
         <div class="catalog-item__wrapper">
           <div class="catalog-item__wrapper-middle">
-            <a class="catalog-item__link" href="#">
+            <a class="catalog-item__link" href="#" aria-label="заголовок выбора товара">
               <h2 class="catalog-item__short-title catalog-item__short-title--middle">
               Корзинка для белья
               </h2>
@@ -172,7 +172,7 @@
         </div>
         <div class="catalog-item__wrapper-bottom">
           <p class="catalog-item__price">690 руб.</p>
-          <a class="catalog-item__button" href="#">
+          <a class="catalog-item__button" href="form.html" aria-label="карточка выбора товара">
             <svg class="catalog-item__button-cart" width="20px" height="19px">
               <use xlink:href="#icon-cart"></use>
             </svg>
@@ -183,7 +183,7 @@
 
       <li class="catalog-card__item catalog-card__item--bottom catalog-item">
         <div class="catalog-item-top">
-          <a class="catalog-item__link-image" href="#">
+          <a class="catalog-item__link-image" href="#" aria-label="карточка выбора товара">
             <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
@@ -198,7 +198,7 @@
         </div>
         <div class="catalog-item__wrapper">
           <div class="catalog-item__wrapper-middle">
-        <a class="catalog-item__link" href="#">
+        <a class="catalog-item__link" href="#" aria-label="заголовок выбора товара">
           <h2 class="catalog-item__short-title catalog-item__short-title--bottom">
             Большая корзинка для игрушек
           </h2>
@@ -207,7 +207,7 @@
       </div>
       <div class="catalog-item__wrapper-bottom">
         <p class="catalog-item__price">1 500 руб.</p>
-        <a class="catalog-item__button" href="#">
+        <a class="catalog-item__button" href="form.html" aria-label="карточка выбора товара">
           <svg class="catalog-item__button-cart" width="20px" height="19px">
             <use xlink:href="#icon-cart"></use>
           </svg>
@@ -222,7 +222,7 @@
       <div class="create__process-wrapper">
         <h3 class="create__process">Процесс производства</h3>
       </div>
-        <div class="create__video-wrapper--desktop">
+        <div class="create__video-wrapper create__video-wrapper--desktop">
           <div class="create__video-wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
@@ -233,7 +233,7 @@
               <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
               <img class="create__video" src=img/video-mobile@1x.jpg srcset="img/video-mobile@2x.jpg" width="260" height="150" alt="трехцветная корзинка">
             </picture>
-            <button class="create__video-button" type="button">
+            <button class="create__video-button" type="button" aria-label="кнопка воиспроизведения видео">
               <svg width="101px" height="77px">
                 <use xlink:href="#icon-play"></use>
               </svg>
@@ -248,7 +248,7 @@
           видео о том, как появляются
           наши товары.
         </p>
-        <a class="button create__button">Сделать заказ</a>
+        <a class="button create__button" href="form.html" aria-label="кнопка сделать заказ">Сделать заказ</a>
       </div>
     </div>
     </section>
@@ -257,7 +257,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__logo-wrapper">
-      <a class="page-footer__logo-link" href="index.html">
+      <a class="page-footer__logo-link" href="index.html" aria-label="Логотип мишка главной страницы">
         <svg  class="page-footer__logo"  width="101px" height="34px">
           <use xlink:href="#icon-footer"></use>
         </svg>
@@ -266,21 +266,21 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__item social__item--instagram" href="#">
+          <a class="social__item social__item--instagram" href="#" aria-label="иконка перехода на instagram аккаунт">
             <svg width="22px" height="21px">
               <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__item social__item--facebook" href="#">
+          <a class="social__item social__item--facebook" href="#" aria-label="иконка перехода на facebook аккаунт">
             <svg width="22px" height="21px">
               <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__item social__item--twiter" href="#">
+          <a class="social__item social__item--twiter" href="#" aria-label="иконка перехода на twiter аккаунт">
             <svg width="22px" height="21px">
               <use xlink:href="#icon-twitter"></use>
             </svg>
@@ -290,40 +290,40 @@
     </div>
 
     <div class="copyright page-footer__copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="иконка перехода на сайт онлайн школы htmlacademy.ru">
         <b class="copyright__text">Разработано</b>
-        <svg class="copyright__link--image" width="27px" height="34px">
+        <svg class="copyright__link-image" width="27px" height="34px">
           <use xlink:href="#icon-htmlacademy"></use>
         </svg>
       </a>
     </div>
   </footer>
 
-    <div class="form-cart__popup-overlay form-cart__popup-overlay--open">
-      <div class="form-cart__wrapper form-cart__wrapper--open">
-        <form class="form-cart">
-          <h2 class="form-cart__title">Добавить в корзину</h2>
-          <fieldset class="form-cart__fieldset">
-            <legend class="form-cart__legend">Выберите размер:</legend>
-            <ul class="form-cart__list">
-              <li class="form-cart__list-item">
-                <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-s" name="size" checked>
-                <label class="form-cart__label form-cart__label--checkbox" for="size-s">S</label>
-              </li>
-              <li class="form-cart__list-item">
-                <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-m" name="size">
-                <label class="form-cart__label form-cart__label--checkbox" for="size-m">M</label>
-              </li>
-              <li class="form-cart__list-item">
-                <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-l" name="size">
-                <label class="form-cart__label form-cart__label--checkbox" for="size-l">L</label>
-              </li>
-            </ul>
-          </fieldset>
-        <button class="form-cart__button form-cart__button--green" type="button">Добавить</button>
-      </form>
-    </div>
+  <div class="popup-overlay popup-overlay--open popup-overlay--close popup-overlay--nojs">
+    <div class="popup-overlay__wrapper popup-overlay__wrapper--open popup-overlay__wrapper--close popup-overlay__wrapper--nojs">
+      <form class="form-cart">
+        <h2 class="form-cart__title">Добавить в корзину</h2>
+        <fieldset class="form-cart__fieldset">
+          <legend class="form-cart__legend">Выберите размер:</legend>
+          <ul class="form-cart__list">
+            <li class="form-cart__list-item">
+              <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-s" name="size" checked>
+              <label class="form-cart__label form-cart__label--checkbox" for="size-s" aria-label="размер S">S</label>
+            </li>
+            <li class="form-cart__list-item">
+              <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-m" name="size">
+              <label class="form-cart__label form-cart__label--checkbox" for="size-m" aria-label="размер M">M</label>
+            </li>
+            <li class="form-cart__list-item">
+              <input class="form-cart__control form-cart__control--checkbox visually-hidden" type="checkbox" id="size-l" name="size">
+              <label class="form-cart__label form-cart__label--checkbox" for="size-l" aria-label="размер L">L</label>
+            </li>
+          </ul>
+        </fieldset>
+      <button class="form-cart__button form-cart__button--green" type="button" aria-label="кнопка добавить">Добавить</button>
+    </form>
   </div>
+</div>
 </body>
 
 </html>

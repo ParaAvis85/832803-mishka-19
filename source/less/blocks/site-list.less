@@ -1,4 +1,19 @@
 .site-list {
+  @media (max-width: @only-mobile-width) {
+    /* при наличии JS релизации меню открывается */
+    &--open {
+      display: block;
+    }
+    /* при наличии JS реализиции меню зарывается */
+    &--close {
+      display: none;
+    }
+    /* при отсутсвии JS меню всегда отрыто */
+    &--nojs {
+      display: block;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     &--left {
       display: flex;
@@ -57,27 +72,6 @@
     &--hide {
       padding-right: 9px;
     }
-  }
-}
-
-.site-list__point {
-  @media (max-width: @only-mobile-width) {
-    &--hide {
-      display: none;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    font-size: 15px;
-    line-height: 24px;
-    font-style: normal;
-    font-weight: 400;
-    color: @greyish-brown;
-    margin: 0;
-    padding-top: 17px;
-    padding-bottom: 0;
-    padding-right: 49px;
-    z-index: 1;
   }
 }
 
