@@ -58,11 +58,9 @@
               <img class="main-nav__logo-image" src="img/logo-mobile.svg" srcset="img/logo-mobile.svg" alt="Логотип мишка">
             </picture>
           </a>
-
-          <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Кнопка закрыть мобильное меню">
-            <svg width="20px" height="20px">
-              <use xlink:href="#icon-menu-close"></use>
-            </svg>
+          <!-- main-nav__toggle--closed / --opened - управление внешним видом кнопки -->
+          <!-- main-nav__toggle--nojs - открытие / закрытие меню при вкл/ откл js -->
+          <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--opened main-nav__toggle--nojs" type="button" aria-label="Кнопка закрыть мобильное меню">
           </button>
         </div>
 
