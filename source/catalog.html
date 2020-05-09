@@ -8,32 +8,6 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2">
-    <!-- Pixel Glass -->
-    <style>
-    html {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/pp/mishka-catalog-mobile.png");
-    }
-    /* Tablet */
-    @media (min-width: 768px) {
-      html {
-        /* Tablet layout */
-        background-image: url("img/pp/mishka-catalog-tablet.png");
-      }
-    }
-    /* Desktop */
-    @media (min-width: 1150px) {
-      html {
-        /* Desktop layout */
-        background-image: url("img/pp/mishka-catalog-desktop.png");
-      }
-    }
-    </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
   <script>
     // Picture element HTML5 shiv
     document.createElement( "picture" );
@@ -58,11 +32,9 @@
               <img class="main-nav__logo-image" src="img/logo-mobile.svg" srcset="img/logo-mobile.svg" alt="Логотип мишка">
             </picture>
           </a>
-
-          <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-label="Кнопка закрыть мобильное меню">
-            <svg width="20px" height="20px">
-              <use xlink:href="#icon-menu-close"></use>
-            </svg>
+          <!-- main-nav__toggle--closed / --opened - управление внешним видом кнопки -->
+          <!-- main-nav__toggle--nojs - открытие / закрытие меню при вкл/ откл js -->
+          <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--opened main-nav__toggle--nojs" type="button" aria-label="Кнопка закрыть мобильное меню">
           </button>
         </div>
 
@@ -107,8 +79,11 @@
 
 
   <main class="catalog">
-    <h1 class="page-title">Каталог товаров</h1>
-
+    <div class="page">
+      <div class="container">
+        <h1 class="page__title">Каталог товаров</h1>
+      </div>
+    </div>
     <ul class="catalog-card container">
       <li class="catalog-card__item catalog-card__item--top catalog-item">
         <div class="catalog-item-top">
