@@ -1,19 +1,6 @@
-.page-title {
+.page {
   position: relative;
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-  text-align: center;
-
-  color: @black;
   background-color: @footer;
-
-  margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 70px;
-  padding-bottom: 76px;
-  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     &::after {
@@ -37,6 +24,23 @@
       background-position: 50% 50%;
     }
   }
+}
+
+.page__title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+
+  color: @black;
+
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 70px;
+  padding-bottom: 76px;
+  margin-bottom: 21px;
+
 
   @media (min-width: @tablet-width) and (max-width: @only-tablet-width) {
     font-size: 43px;
